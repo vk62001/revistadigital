@@ -32,8 +32,8 @@ const  App = () => {
               <p className="text-white mt-10 text-base">
                 El cambio del aprendizaje de manera presencial a la era digital ha generado y <br />propiciado un grado de responsabilidad y compromiso de todos...
               </p>
-              <button className="bg-white text-black px-6 py-4 rounded-full text-3xl mt-10"> Registrarse ahora</button>
-              <button className="bg-white text-black px-6 py-4 rounded-full text-3xl mt-10 ml-8"> Ver más</button>
+              <button className="bg-white text-black px-4 py-4 rounded-full text-3xl mt-10"> Registrarse ahora</button>
+              <button className="bg-white text-black px-4 py-4 rounded-full text-3xl mt-10 ml-8"> Ver más</button>
             </div>
           </div>
           <div className="text-3xl"></div>
