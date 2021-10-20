@@ -2,12 +2,13 @@ import React from 'react'
 import './IndexPage.css';
 
 import LogoTect from '../../assets/images/logotec.png';
+import logo from '../../assets/images/logo.png'
 
 
 const IndexPage = () => {
     return (
         <div>
-            <h1 className="titulo font-sans text-7xl font-bold uppercase">Revista <br /> Digital</h1>
+            <h1 className="titulo font-sans text-7xl font-bold uppercase">Revista <br /> Digital<br /><img className="logo" src={logo} alt="logo" /></h1>
                 <img className="logotec" src={LogoTect} alt="logotec" />
                 <div className="fixed h-full w-full">
                 <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-600">
@@ -30,7 +31,7 @@ const IndexPage = () => {
                     <div>
                         <div className="ml-24">
                         <h1 className="text-white font-sans text-7xl">
-                            Bienvendido
+                            Bienvenido
                         </h1>
                         <p className="text-white mt-10 text-base">
                             El cambio del aprendizaje de manera presencial a la era digital ha generado y <br />propiciado un grado de responsabilidad y compromiso de todos...
