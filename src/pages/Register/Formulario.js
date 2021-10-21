@@ -67,7 +67,7 @@ const Formulario = () => {
             <input/>
             </div>
             <div className="col-md-3">
-            <button className="btn btn-primary hover: bg-blue-500" type ="submit">Enviar</button>
+            <button className="btn btn-primary hover: bg-blue-500 font-bold" type ="submit">Enviar</button>
 
             </div>
             
