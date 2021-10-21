@@ -11,7 +11,7 @@ const IndexPage = () => {
             <h1 className="titulo font-sans text-7xl font-bold uppercase">Revista <br /> Digital<br /><img className="logo" src={logo} alt="logo" /></h1>
                 <img className="logotec" src={LogoTect} alt="logotec" />
                 <div className="fixed h-full w-full">
-                <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-600">
+                <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-800">
                     <div className="h-1/4 flex w-full">
                         <div className="w-1/2 "></div>
                         <div className="w-1/2 ">
