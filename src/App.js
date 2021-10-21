@@ -5,6 +5,7 @@ import Contact from './pages/Contact/Contact';
 import Editions from './pages/Editions/Editions';
 import IndexPage from './pages/IndexPage/IndexPage';
 import Login from './pages/Login/Login';
+import Formulario from './pages/Register/Formulario'
 
 const  App = () => {
   return (
@@ -14,8 +15,11 @@ const  App = () => {
             <Route path="/contact" exact component = {Contact}  />
             <Route path="/editions" exact component = {Editions}  />
             <Route path="/login" exact component = {Login}  />
+            
+            <Route path="/formulario" exact component = {Formulario}/>
           </Switch>
         </BrowserRouter>
+        
   ) 
 }
 

@@ -1,71 +1,42 @@
-import React, { useState } from 'react';
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import React, { Fragment, useState } from 'react';
 import './Login.css';
-import logo from '../../assets/images/Fondo.jpg';
 
 
 
 
+const Login = () =>{
+  return (
 
-
-export default function Login() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
   
-    function validateForm() {
-      return email.length > 0 && password.length > 0;
-    }
-  
-    function handleSubmit(event) {
-      event.preventDefault();
-    }
-    
-    return (
-      
-      <div>
-        <img src={logo}/> 
-      
-      <div className="container">
-        
-        <div className="h1">
+  <Fragment>
         <h1>Iniciar Sesion</h1>
-        </div>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group size="lg" controlId="email">
-            <Form.Label>Correo: </Form.Label>
-            <div className="correo">
-            <Form.Control
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-         </div>
-          </Form.Group>
-          <Form.Group size="sm" controlId="password">
-            <Form.Label>Contraseña: </Form.Label>
-            <div className="contraseña1">
-            <Form.Control
-             autoFocus
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+        <form className="row">
+            <div className="col-md-3">
+            <input
+            placeholder="Ingrese su Correo"
+            className="form-control"
+            ></input>
             </div>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Acepto terminos y condiciones" />
-    </Form.Group>
-    <div className="boton">
-    <Button variant="primary" type="submit">
-    Enviar
-  </Button>
-</div>
-  
-        </Form>
+            <div className="col-md-3">
+            <input type="password"
+            placeholder="Ingrese su contraseña"
+            className="form-control"
+            ></input>
+
+            </div>
+            <div className="col-md-3">
+            <input/>
+            </div>
+            <div className="col-md-3">
+            <button className="btn btn-primary">Enviar</button>
+            </div>
+            
+            
+        </form>
+
+        </Fragment>
         
-      </div>
-      
-   </div>
     );
-  }
+}
+
+export default Login;
