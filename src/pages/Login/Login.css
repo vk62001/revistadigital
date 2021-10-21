@@ -14,15 +14,26 @@
     left: 80%;
     transform: translate(-50%, -50%);
     padding: 15px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1rem);
     border: 5px;
-    color: green;
-    border-color: black;
+    color: white;
+    border-radius: 1px;
+    border-color: white;
     border-width: 1px;
     border-style: solid;
-    
-    
+    }
+ .h1{
+     position: relative;
+     font-size: 18px;
+     margin-bottom: 15px;
+     padding-bottom: 7px;    
  }
+ 
  .correo{
+    
+   
      display: block;
      width: 100%;
      height: 40px;

@@ -2,7 +2,7 @@ import React from 'react'
 import './IndexPage.css';
 
 import LogoTect from '../../assets/images/logotec.png';
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/images/logo.png';
 
 
 const IndexPage = () => {
