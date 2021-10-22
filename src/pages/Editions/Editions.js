@@ -4,7 +4,7 @@ import './Editions.css';
 const Editions = () => {
     return (
         <div>
-            Edtions
+            <h1>Ediciones</h1>
         </div>
     )
 };
