@@ -74,10 +74,9 @@
   .logo{
     position: absolute;
     float: right;
-    width: 40%;
-    left: 55%;
-    right: 80px;
-      top: 20%;
-      margin-top: 100px;
+    width: 35%;
+    right: 0px;
+    top: 30px;
+    margin-top: 20px;
   
   }

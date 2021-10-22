@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import './Login.css';
 import logo from '../../assets/images/Fondo.jpg';
+import { Link } from 'react-router-dom'
 
 
 
@@ -53,17 +54,15 @@ export default function Login() {
             />
             </div>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Acepto terminos y condiciones" />
-    </Form.Group>
+          <Link to="/Login">¿Olvide mi Contraseña?</Link>
     <div className="boton">
-    <Button variant="primary" type="submit">
+    <Button variant="primary" type="submit" >
     Enviar
   </Button>
   
-  <div className="boton2">
+  <div className="boton">
       <br/>
-  <Button variant="primary" type= "submit">
+  <Button variant="primary" type= "submit" href="/formulario">
       Registrarme
   </Button>
   </div>

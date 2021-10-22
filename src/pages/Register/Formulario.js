@@ -1,82 +1,87 @@
-import React , {Fragment, useState} from 'react';
-import { createIconSetFromFontello } from 'react-native-vector-icons';
+import React, { useState } from 'react';
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import './Formulario.css';
+import logo from '../../assets/images/Revista.png';
 
-const Formulario = () => {
-    const [datos, setDatos]=useState({
-        nombre:  '',
-        apellido: '',
-        correo: '',
-        contraseña: ''
 
-    })
-    const handleInputChange =(event) => {
-        //console.log(event.target.value)
-        setDatos({
-             ...datos,
-        [event.target.name] : event.target.value
-        })
 
+
+
+
+export default function Formulario() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [Apellido, setApellido] = useState("");
+    const [nombre, setNombre] = useState("");
+  
+    function validateForm() {
+      return email.length > 0 && password.length > 0;
     }
-    const enviarDatos = (event) =>{
-        event.preventDefault();
-        console.log(datos.nombre + ' ' + datos.apellido + ' ' + datos.correo)
-
+  
+    function handleSubmit(event) {
+      event.preventDefault();
     }
-
+    
     return (
+      
+      <React.Fragment>
+          <div className="logo">
+          <img src={logo}/>
+              </div>
+      <div className="contenedor">
+            
         
-        <Fragment>
+        <div className="h1">
         <h1>Crear Cuenta</h1>
-        <form className="row" onSubmit={enviarDatos}>
-            <div className="col-md-3">
-            <input
-            placeholder="Ingrese su nombre"
-            className="form-control"
-            type="text"
-            name="nombre"
-            onChange={handleInputChange}
-            ></input>
+        </div>
+        <Form onSubmit={handleSubmit}>
+        <Form.Label>Nombre</Form.Label>
+         <Form.Control
+              type="text"
+              value={nombre}
+              onChange={(e) => setNombre(e.target.value)}
+            />
+          <Form.Group controlId="email">
+            <Form.Label>Apellido: </Form.Label>
+            <Form.Control
+              type="text"
+              value={Apellido}
+              onChange={(e) => setApellido(e.target.value)}
+            />
+         <Form.Label>Correo</Form.Label>
+         <Form.Control
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
+          
+          <Form.Group size="sm" controlId="password">
+            <Form.Label>Contraseña: </Form.Label>
+            <div className="contraseña1">
+            <Form.Control
+             autoFocus
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
             </div>
-            <div className="col-md-3">
-            <input 
-            placeholder="Ingrese apellido"
-            className="form-control"
-            type="text"
-            name="apellido"
-            onChange={handleInputChange}
-            ></input>
-            </div>
-            <div className="col-md-3">
-            <input
-            placeholder="Ingrese su correo"
-            className="form-control"
-            type="email"
-            name="correo"
-            onChange={handleInputChange}
-            ></input>
-            </div>
-            <div className="col-md-3">
-            <input type="password"
-            placeholder="Ingrese su contraseña"
-            className="form-control"
-            name="contraseña"
-            onChange={handleInputChange}
-            ></input>
-            </div>
-            <div className="col-md-3">
-            <input/>
-            </div>
-            <div className="col-md-3">
-            <button className="btn btn-primary hover: bg-blue-500 font-bold" type ="submit">Enviar</button>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+    <Form.Check type="checkbox" label="Acepto terminos y condiciones" />
+    </Form.Group>
+    <div className="boton">
+    <Button variant="primary" type="submit">
+    Registrar
+  </Button>
 
-            </div>
-            
-            
-        </form>
-
-        </Fragment>
+</div>
+  
+        </Form>
         
+      </div>
+      
+      </React.Fragment>
     );
-}
-
-export default Formulario;
+  }
