@@ -1,0 +1,57 @@
+h3{
+    color: royalblue;
+    left: 400px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: 200%;
+    
+
+}
+h4{
+    color: steelblue;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+h5{
+        color:dimgray;
+        font-size: 20px;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        top: -70;
+    
+    }
+
+h6{
+        color:darkgreen;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        
+    
+    }
+
+.logorevista{
+    position: absolute;
+       left: 400px;
+       top: -70px;
+       margin-top: 140px;
+       width: 200px;
+       height: 300px;
+       transition: width 2s, height 2s, transform 2s;
+}
+.logorevista:hover{
+    width: 300px;
+    height: 300px;
+    transform: rotate(360deg);
+}
+p{
+    color:dimgray;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    
+}

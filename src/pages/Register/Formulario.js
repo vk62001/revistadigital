@@ -15,9 +15,9 @@ export default function Formulario() {
     const [Apellido, setApellido] = useState("");
     const [nombre, setNombre] = useState("");
   
-    function validateForm() {
-      return email.length > 0 && password.length > 0;
-    }
+   // function validateForm() {
+     // return email.length > 0 && password.length > 0;
+    //}
   
     function handleSubmit(event) {
       event.preventDefault();
