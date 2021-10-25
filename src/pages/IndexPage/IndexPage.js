@@ -35,9 +35,11 @@ const IndexPage = () => {
                         <h2 className="text-white font-sans text-7xl">
                             Bienvenido
                         </h2>
+                       
                         <p className="text-white mt-10 text-base">
                             El cambio del aprendizaje de manera presencial a la era digital ha generado y <br />propiciado un grado de responsabilidad y compromiso de todos...
                         </p>
+                       
                         <br/>
                         <button1 className="bg-white text-black px-4 py-4 rounded-full text-3xl mt-10"> Registrarse ahora</button1>
                         <button2 className="bg-white text-black px-4 py-4 rounded-full text-3xl mt-10 ml-8"> Ver más</button2>

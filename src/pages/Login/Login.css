@@ -5,7 +5,6 @@
     width: 25%;
     top: 50%;
     left: 80%;
-    transform: translate(-50%, -50%);
     padding: 60px;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.1);
@@ -71,11 +70,14 @@
     border: none;
     outline: none;
     border-radius: 1px;
-    border-radius: 5px;
-    
-     
-     
-     
+    border-radius: 5px;   
  }
+ @media(max-widht:800px){
+    logo{
+        width: 100%;
+
+    }
+    
+}
  
  

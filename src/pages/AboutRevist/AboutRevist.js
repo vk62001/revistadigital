@@ -6,6 +6,7 @@ const About = () => {
     return (
         <div>
                 Sobre la Revista
+                
         </div>
     )
 };
