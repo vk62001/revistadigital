@@ -21,18 +21,22 @@ const Contact = () => {
                 <button3>Enviar</button3>
                 </div>
                 <div className="Contenedorr">
-                    <h9> <i class="fa fa-map-marker" aria-hidden="true"></i> Carretera Ixtaltepec -Comitancillo Km. 7.5 <br/>
-                    San Pedro Comitancillo</h9>
-                    <br/>
-                    <br/>
-                    <h10> cc_comitancillo@tecnm.mx</h10>
-                    <br/>
-                    <br/>
-                    <h11> (01 971) 717 21 09 <br/> (01 971) 717 21 10</h11>
-                    </div>
                     <div className="icon-text">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <i class="fas fa-map-marker-alt"></i> <span>Carretera Ixtaltepec -Comitancillo Km. 7.5 <br/>
+                    San Pedro Comitancillo</span>
                     </div>
+                    <br/>
+                    <br/>
+                    <div className="icon-text">
+                    <i className="FaBeer" aria-hidden="true"></i> <span>cc_comitancillo@tecnm.mx</span>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div className="icon-text">
+                    <i class="" aria-hidden="true"></i> <span>(01 971) 717 21 09 <br/> (01 971) 717 21 10</span>
+                    </div>
+                    </div>
+                    
                 
                 
                 

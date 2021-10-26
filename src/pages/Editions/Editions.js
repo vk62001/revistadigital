@@ -15,9 +15,11 @@ const Editions = () => {
              <h5>La digitalizacion  <br/>en la educación</h5>
              <br/>
              <h6>TECCOMITANCILLO</h6>
+             <div className="parrafo">
              <p>El cambio del aprendizaje de <br/>manera presencial a la era digital<br/>
               ha generado y propiciado un grado
             <br/>de responsabilidad y compromiso<br/>de todos...</p>
+            </div>
                
            
         </div>

@@ -1,8 +1,8 @@
 
-.Contenedor{
+.ContenedorComentarios{
     position: absolute;
-    top: 10%;
-    left: 75%;
+    top: 5%;
+    left: 25%;
     width: 600px;
     margin: auto;
     background:rgba(0, 0, 0, 0, 4);
@@ -18,13 +18,9 @@
     top: -60px;
     margin-top: 140px;
 }
-h9,h10,h11{
-    color: #2c4b9e;
-    font-weight: bold;
-    font-size: 15px;
-}
 
-.Contacto{
+
+.Comentarios{
     
     color: #2c4b9e;
     font-weight: bold;
@@ -69,15 +65,11 @@ button3{
     cursor:pointer;
      
 }
-@media(max-widht:800px){
-    .contenedor{
-        width: 100%;
 
+.logoC {
+    position: absolute;
+        left: 1090px;
+        top: -50px;
+        margin-top: 90px;
+        width: 200px;
     }
-    
-}
-@media (max-widht:720px){
-    .contenedor{
-        width:100%;
-    }
-}
