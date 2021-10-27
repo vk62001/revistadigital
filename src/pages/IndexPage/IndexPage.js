@@ -2,6 +2,7 @@ import React from 'react'
 import './IndexPage.css';
 import LogoTect from '../../assets/images/logotec.png';
 import logo1 from '../../assets/images/logo.png';
+import NavBar from '../../components/Navbar';
 
 
 const IndexPage = () => {
@@ -11,22 +12,10 @@ const IndexPage = () => {
             <img className="logocomi" src={logo1} alt="logo" />
            </h2>
                 
-                <img className="logotec" src={LogoTect} alt="logotec" />
+                <img className="logotec phone:hidden laptop:block" src={LogoTect} alt="logotec" />
                 <div className="fixed h-full w-full">
                 <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-800">
-                    <div className="h-1/4 flex w-full">
-                        <div className="w-1/2 "></div>
-                        <div className="w-1/2 ">
-                            <ul className="flex justify-center items-center">
-                            <li className="p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white ">Inicio</li>
-                            <li className="p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white " >Iniciar Sesión</li>
-                            <li className="p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white ">Ediciones</li>
-                            <li className="p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white ">Sobre la revista</li>
-                            <li className="p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white ">Comentarios</li>
-                            <li className="p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white ">Contacto</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <NavBar />
                     <div>
                     
                     </div>
@@ -46,7 +35,9 @@ const IndexPage = () => {
                         </div>
                     </div>
                     <div className="text-3xl"></div>
-                    <div className="bg-white">filas 5</div>
+                    <div className="bg-white">
+                        <div className="w-full phone:bg-red-600 tablet:bg-blue-600 laptop:bg-yellow-600 desktop:bg-green-300">Prueba</div>
+                    </div>
                     <div className="bg-white">filas 6</div>
                 </div>
                 </div>
