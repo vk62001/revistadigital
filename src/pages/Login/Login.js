@@ -21,10 +21,12 @@ export default function Login() {
     
     return (
       
+
+      
       <div>
         <img src={logo}/> 
       
-      <div className="container">
+      <div className="w-190px container">
         
         <div className="h1">
         <h1>Iniciar Sesion</h1>
@@ -68,7 +70,9 @@ export default function Login() {
         </Form>
         
       </div>
-      
-   </div>
+      </div>
+   
     );
-  }
+  
+    }
+  

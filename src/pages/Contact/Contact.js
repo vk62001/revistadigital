@@ -28,12 +28,12 @@ const Contact = () => {
                     <br/>
                     <br/>
                     <div className="icon-text">
-                    <i className="FaBeer" aria-hidden="true"></i> <span>cc_comitancillo@tecnm.mx</span>
+                    <i className="fas fa-envelope" aria-hidden="true"></i> <span>cc_comitancillo@tecnm.mx</span>
                     </div>
                     <br/>
                     <br/>
                     <div className="icon-text">
-                    <i class="" aria-hidden="true"></i> <span>(01 971) 717 21 09 <br/> (01 971) 717 21 10</span>
+                    <i class="fas fa-phone" aria-hidden="true"></i> <span>(01 971) 717 21 09 <br/> (01 971) 717 21 10</span>
                     </div>
                     </div>
                     

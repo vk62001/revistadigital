@@ -8,8 +8,9 @@ import NavBar from '../../components/Navbar';
 const IndexPage = () => {
     return (
         <div>
-            <h2 className="titulo font-sans text-7xl font-bold uppercase">Revista <br /> Digital<br/>
-            <img className="logocomi" src={logo1} alt="logo" />
+            
+            <h2 className="titulo font-sans text-7xl font-bold uppercase phone:block">Revista <br /> Digital<br/>
+            <img className=" w-48 logocomi phone:hidden laptop:block " src={logo1} alt="logo" />
            </h2>
                 
                 <img className="logotec phone:hidden laptop:block" src={LogoTect} alt="logotec" />
@@ -25,13 +26,15 @@ const IndexPage = () => {
                             Bienvenido
                         </h2>
                        
-                        <p className="text-white mt-10 text-base">
+                        <p className=" text-white mt-10 text-base">
                             El cambio del aprendizaje de manera presencial a la era digital ha generado y <br />propiciado un grado de responsabilidad y compromiso de todos...
                         </p>
                        
                         <br/>
-                        <button1 className="bg-white text-black px-4 py-4 rounded-full text-3xl mt-10"> Registrarse ahora</button1>
-                        <button2 className="bg-white text-black px-4 py-4 rounded-full text-3xl mt-10 ml-8"> Ver más</button2>
+                        <div className="phone:hidden laptop:block desktop:block flex flex-col">
+                        <button1 className="bg-white text-black px-4 py-4 rounded-full text-3xl mt-10 font-bold flex-col"> Registrarse ahora</button1>
+                        <button2 className="bg-white text-black px-4 py-4 rounded-full text-3xl mt-10 ml-8 font-bold"> Ver más</button2>
+                        </div>
                         </div>
                     </div>
                     <div className="text-3xl"></div>
