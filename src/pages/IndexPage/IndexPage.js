@@ -21,7 +21,7 @@ const IndexPage = () => {
                     <div>
                     <div clasName=" ">
                      <div className="  absolute ml-80 inset-y-60 right-20">
-                      <img className="w-35  logocomi phone:hidden tablet:block desktop:block" src={logo1} alt="logo" />
+                      <img className="w-35  logocomi phone:hidden tablet:hidden laptop:block desktop:block" src={logo1} alt="logo" />
                     </div>
                       </div>
                     </div>
@@ -37,8 +37,8 @@ const IndexPage = () => {
                        
                         <br/>
                         <div className="my-4 phone:flex">
-                        <a href="/formulario" className="  bg-white hover:bg-blue-600 text-black px-4 py-4  rounded-full text-3xl mt-10 text-center cursor-pointer   "> Registrarse ahora</a>
-                        <a href="/about" className="  bg-white hover:bg-blue-600 text-black px-4 py-4 rounded-full text-3xl mt-10 ml-8 text-center cursor-pointer"> Ver más</a>
+                        <a href="/formulario" className="  bg-white hover:bg-blue-600 text-black px-4 py-4  rounded-full text-3xl mt-10 text-center cursor-pointer  "> Registrarse ahora</a>
+                        <a href="/about" className="  bg-white hover:bg-blue-600 text-black px-4 py-4 rounded-full text-3xl mt-10 ml-8 text-center cursor-pointer "> Ver más</a>
                         </div>                       
                          </div>
                     </div>
