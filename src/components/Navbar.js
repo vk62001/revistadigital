@@ -9,11 +9,14 @@ const NavBar = props => {
             <div className="desktop:w-1/2 laptop:w-1/2 tablet:w-0 phone:w-full cursor-pointer">
                 <p className="desktop:hidden laptop:hidden tablet:hidden phone:block text-white
                  flex">
-                <i className="fas fa-bars"></i>
-                </p>
+                      </p>
+                      <div  className=" block desktop:hidden laptop:hidden tablet:hidden">
+                <i id="boton "className="fas fa-bars text-white" id="mobile-menu"></i>
+                </div>
+               
             </div>
-            <div id="menu" className="desktop:w-1/2 tablet:w-full tablet:block phone:hidden ">
-                <ul className="flex justify-center items-center">
+            <div id="menu" className="desktop:w-1/2 tablet:w-full tablet:block phone:hidden hidden ">
+                <ul  className="flex justify-center items-center">
                 <Link to={"/" }  className={'p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
                         <i className="fas fa-home"></i>
                         <p className="m-0 text-xs ml-2">Inicio</p>
@@ -41,11 +44,17 @@ const NavBar = props => {
                 
     
                 
-                
+                    
                 </ul>
+                
+                
             </div>
+                     
+          
         </div>
+        
     );
 };
 
 export default NavBar;
+<script src="App.js"defer></script>  

@@ -21,11 +21,19 @@ const  App = () => {
             <Route path="/about" exact component = {About}/>
             <Route path="/comments" exact component = {Comments}/>
           </Switch>
+       
         </BrowserRouter>
+           
         
   ) 
+  
+  
 }
 
+
 export default App;
+
+
+
 
 
