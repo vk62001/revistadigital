@@ -5,8 +5,8 @@ import logo from '../../assets/images/logo.png';
 const Comments = () => {
     return (
         <div>
-                 <div className="logoC">
-                  <img src={logo}/>
+                 <div className="absolute top-0 right-0 mr-20 mt-4 logoC">
+                  <img className=" w-48"src={logo}/>
                  </div>
                 <div className="ContenedorComentarios">
                 <div className="Comentarios">
