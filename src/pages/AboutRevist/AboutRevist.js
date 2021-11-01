@@ -7,9 +7,9 @@ import sep from '../../assets/images/sep.png';
 const About = () => {
     return (
         <div>
-            
+            <div clasName="container mx-auto">
             <div className="ml-44 p-10 mt-4 cursor-default">
-           <h3 class="mb-1 font-sans text-6x1 font-bold">Objetivos</h3>
+           <h8 class="mb-1 font-sans text-3xl font-bold text-blue-800">Objetivos</h8>
            <p class="mb-1 mt-10 font-sans text-4x2 font-bold text-green-600">Enfoque y alcance</p>
            <p className=" mt-10 ">
            La Revista Digital Universitaria es una publicación electrónica bimestral de comunicación social de la ciencia, dirigida <br/>
@@ -35,13 +35,13 @@ const About = () => {
 
              </p>
              </div>
-             <div className=" absolute left-0 top-0 mt-5 ">
+             <div className=" absolute left-0 top-0 mt-5 ml-6">
            <img className="w-40 logocomi phone:block tablet:block laptop:block desktop:block" src={logo1} alt="logo" />
            </div>
            <div className=" absolute top-0 right-0 mr-20 mt-8">
-           <img className="w-40 logosep phone:block tablet:block laptop:block desktop:block" src={sep} alt="sep" />
+           <img className="w-40 logosep phone:hidden tablet:block laptop:block desktop:block" src={sep} alt="sep" />
            </div>
-                
+                </div>
         </div>
     )
 };
