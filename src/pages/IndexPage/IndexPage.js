@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './IndexPage.css';
 import LogoTect from '../../assets/images/logotec.png';
 import logo1 from '../../assets/images/logo.png';
@@ -19,14 +20,18 @@ const IndexPage = () => {
                 <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-800">
                     <NavBar />
                     <div>
-                    <div clasName=" ">
+                    <div clasName="">
                      <div className="absolute top-0 right-0 mt-64 mr-20">
-                      <img className="w-96  logocomi phone:hidden tablet:hidden laptop:block desktop:block" src={logo1}  />
+                      <img className="w-96 
+                                        phone:block phone:w-1/3 phone:fixed phone:left-6 phone:bottom-10
+                                        tablet:block tablet:w-1/3 tablet:fixed tablet:left-6 tablet:bottom-10 
+                                        laptop:block 
+                                        desktop:block" src={logo1} alt="logo" />
                     </div>
                       </div>
                     </div>
                     <div>
-                        <div className="ml-24">
+                        <div className="ml-24 phone:ml-2 tablet:ml-10 table:mr-10">
                         <h2 className=" text center text-white font-sans text-7xl">
                             Bienvenido
                         </h2>
@@ -36,10 +41,27 @@ const IndexPage = () => {
                         </p>
                        
                         <br/>
-                        <div className="my-4 phone:flex ">
-                        <a href="/formulario" className="bg-white hover:bg-blue-600 text-black px-4 py-4  rounded-full text-3xl mt-10 text-center cursor-pointer   "> Registrarse ahora</a>
+                        <div className="phone:grid phone:grid-cols-2 phone:gap-4 phone:w-11/12 
+                                        tablet:grid tablet:grid-cols-2 tablet:gap-4 tablet:w-11/12  
+                                        laptop:w-1/3 desktop:w-2/5 laptop:bg-red-100">
+                                <Link 
+                                    className="phone:py-2 rounded-full bg-white phone:text-2xl text-center"
+                                >
+                                    Registrar
+                                </Link>
+                                <Link 
+                                    className="phone:py-2 rounded-full bg-white phone:text-2xl text-center"
+                                >
+                                    Ver Más
+                                </Link>
+                        </div>
+                        {/* <div className="my-4 phone:flex ">
+                        <a 
+                            href="/formulario" 
+                            className="bg-white hover:bg-blue-600 text-black px-4 py-4  rounded-full text-3xl mt-10 text-center cursor-pointer  
+                                        phone:text-sm phone:px-2 phone:py-2 phone:flex phone:align-middle phone: "> Registrarse ahora</a>
                         <a href="/about" className="  bg-white hover:bg-blue-600 text-black px-4 py-4 rounded-full text-3xl mt-10 ml-8 text-center cursor-pointer "> Ver más</a>
-                        </div>                       
+                        </div>                        */}
                          </div>
                     </div>
                    

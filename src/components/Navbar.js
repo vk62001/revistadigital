@@ -10,9 +10,9 @@ const NavBar = props => {
                 <p className="desktop:hidden laptop:hidden tablet:hidden phone:block text-white
                  flex">
                       </p>
-                      <div  className=" block desktop:hidden laptop:hidden tablet:hidden">
-                <i id="boton "className="fas fa-bars text-white" id="mobile-menu"></i>
-                </div>
+                    <div  className=" block desktop:hidden laptop:hidden tablet:hidden px-2 py-4">
+                        <i className="fas fa-bars text-white" id="mobile-menu"></i>
+                    </div>
                
             </div>
             <div id="menu" className="desktop:w-1/2 tablet:w-full tablet:block phone:hidden hidden ">
