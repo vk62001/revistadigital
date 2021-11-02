@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
 import Contact from './pages/Contact/Contact';
 import Editions from './pages/Editions/Editions';
 import IndexPage from './pages/IndexPage/IndexPage';

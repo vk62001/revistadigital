@@ -1,8 +1,42 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
+const NavBar = () => {
+    const links = [
+        {
+            title: 'Inicio',
+            icon: 'fas fa-home',
+            to: '/'
+        },
+        {
+            title: 'Login',
+            icon: 'fas fa-user',
+            to: '/login'
+        },
+        {
+            title: 'Ediciones',
+            icon: 'fas fa-book-open',
+            to: '/editions'
+        },
+        {
+            title: 'Sobre la Revista',
+            icon: 'fas fa-bookmark',
+            to: '/about'
+        },
+        {
+            title: 'Comentarios',
+            icon: 'fas fa-comment-dots',
+            to: '/comments'
+        },
+        {
+            title: 'Contacto',
+            icon: 'fas fa-address-card',
+            to: '/contact'
+        }
+    ]
 
-const NavBar = props => {
+    const classLink = 'p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'
+    const classLinkP = 'm-0 text-xs ml-1'
 
     return (
         <div className="h-1/4 flex w-full">
@@ -13,34 +47,18 @@ const NavBar = props => {
             </div>
             <div className="desktop:w-1/2 tablet:w-full tablet:block phone:hidden">
                 <ul className="flex justify-center items-center">
-                <Link to={"/" }  className={'p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
-                        <i className="fas fa-home"></i>
-                        <p className="m-0 text-xs ml-2">Inicio</p>
-                </Link>
-                <Link to={"/login" }  className={'p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
-                        <i className="fas fa-user"></i>
-                        <p className="m-0 text-xs"></p>
-                </Link>
-                <Link to={"/editions"} className={"p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
-                     <i className="fas fa-book-open"></i>
-                     <p className="m-0 text-xs ml-1">Ediciones</p>
-                     </Link>
-                     <Link to={"/about"} className={"p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
-                     <i className="fas fa-bookmark"></i>
-                     <p className="m-0 text-xs ml-1 ">Sobre la Revista</p>
-                     </Link>
-                     <Link to={"/comments"} className={"p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
-                     <i className="fas fa-comment-dots"></i>
-                     <p className="m-0 text-xs ml-1">Comentarios</p>
-                     </Link>
-                     <Link to={"/contact"} className={"p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
-                     <i className="fas fa-address-card"></i>
-                     <p className="m-0 text-xs ml-1">Contacto</p>
-                     </Link>
-                
-    
-                
-                
+                    {
+                        links.map( link => (
+                            <Link 
+                                key={ link.title } 
+                                to={ link.to } 
+                                className={ classLink }
+                            >
+                                <i className={ link.icon }></i>
+                                <p className={ classLinkP }>{ link.title }</p>
+                            </Link>
+                        ))
+                    }
                 </ul>
             </div>
         </div>
