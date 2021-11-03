@@ -17,7 +17,7 @@ const IndexPage = () => {
                
                 <img className="logotec phone:hidden laptop:block" src={LogoTect} alt="logotec" />
                 <div className="fixed h-full w-full">
-                <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-800">
+                <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-900">
                     <NavBar />
                     <div>
                     <div clasName="">
@@ -44,6 +44,7 @@ const IndexPage = () => {
                         <div className="phone:grid phone:grid-cols-2 phone:gap-4 phone:w-11/12 
                                         tablet:grid tablet:grid-cols-2 tablet:gap-4 tablet:w-11/12  
                                         laptop:w-1/3 desktop:w-2/5 laptop:bg-red-100">
+                                            
                                 <Link 
                                     className="phone:py-2 rounded-full bg-white phone:text-2xl text-center"
                                 >

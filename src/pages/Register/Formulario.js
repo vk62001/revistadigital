@@ -25,6 +25,7 @@ export default function Formulario() {
     
     return (
       
+      
       <React.Fragment>
           <div className="logo">
           <img src={logo}/>
@@ -32,8 +33,8 @@ export default function Formulario() {
       <div className="contenedor">
             
         
-        <div className="h1">
-        <h1>Crear Cuenta</h1>
+        <div className="">
+        <h1 className="text-blue">Crear Cuenta</h1>
         </div>
         <Form onSubmit={handleSubmit}>
         <Form.Label>Nombre</Form.Label>

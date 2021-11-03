@@ -22,18 +22,21 @@ export default function Login() {
     return (
       
       <div>
-         <img className="bg-no-repeat" src={logo}/> 
-        
       
-      <div className=" absolute w-3/12 p-16 text-white rounded-none border-black border border-solid container">
         
-        <div className="relative text-lg mb-4 pb-2 h1">
-        <h1>Iniciar Sesion</h1>
+      <div className=" h-full w-full">
+      <img className="fixed w-auto h-auto" src={logo}/> 
+      <div className=" static ml-96 mt-52 px-5 pt-11 inset-x-96 
+      absolute w-3/12 p-16 text-white rounded-none border-black border-solid
+      border-2 border-t-2 bg-black bg-opacity-50 ">       
+        <div className="relative text-white text-lg mb-4 pb-2 h1">
+        <h1 className="text-white font-sans font-bold cursor-default">Iniciar Sesion</h1>
         </div>
+       
         <Form onSubmit={handleSubmit}>
           <Form.Group size="lg" controlId="email">
             <Form.Label>Correo: </Form.Label>
-            <div className="w-full h-10 mb-5 rounded correo">
+            <div className="w-full h-10 mb-5 rounded text-black correo">
             <Form.Control
               type="email"
               value={email}
@@ -53,21 +56,22 @@ export default function Login() {
             </div>
           </Form.Group>
           <Link to="/Login">¿Olvide mi Contraseña?</Link>
-    <div className=" block m-auto h-12 cursor-pointer text-black text-center boton ">
-    <Button variant="primary" type="submit" >
-    Enviar
+    <div className=" block m-auto  cursor-pointer text-white text-center hover:bg-blue-700 font-bold py-2 px-4 rounded bg-blue-900">
+    <Button className="font-bold" variant="primary" type="submit" >
+    Iniciar Sesion
   </Button>
+  </div>
   
-  <div className="boton2 block m-auto w-6/12 h-10 cursor-pointer text-black text-center left-0 bottom-0">
-      <br/>
-  <Button variant="primary" type= "submit" href="/formulario">
+  <div className="block m-auto mt-5  cursor-pointer text-black text-center hover:bg-gray-300 font-bold py-2 px-4 rounded bg-gray-50 ">
+  <Button  variant="primary" type= "submit" href="/formulario">
       Registrarme
   </Button>
   </div>
-</div>
+
   
         </Form>
         
+      </div>
       </div>
       
    </div>
