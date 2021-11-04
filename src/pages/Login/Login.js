@@ -29,7 +29,7 @@ export default function Login() {
       <div className=" static ml-96 mt-52 px-5 pt-11 inset-x-96 
       absolute w-3/12 p-16 text-white rounded-none border-black border-solid
       border-2 border-t-2 bg-black bg-opacity-50 ">       
-        <div className="relative text-white text-lg mb-4 pb-2 h1">
+        <div className="relative text-white text-lg mb-4 pb-2">
         <h1 className="text-white font-sans font-bold cursor-default">Iniciar Sesion</h1>
         </div>
        
