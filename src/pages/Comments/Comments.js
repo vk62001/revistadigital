@@ -4,40 +4,48 @@ import logo from '../../assets/images/logo.png';
 
 const Comments = () => {
     return (
-        <div> 
-             <div className="desktop:w-1/2 laptop:w-1/2 tablet:w-0 phone:w-full cursor-pointer">
-                <p className="desktop:hidden laptop:hidden tablet:hidden phone:block text-white
-                 flex">
-                      </p>
-                    <div  className=" block px-2 py-4">
-                        <i className="fas fa-bars text-blue-900" id="mobile-menu"></i>
-                    </div>
-                 <div className="absolute top-0 right-0 mr-20 mt-4 logoC">
-                  <img className=" w-48 phone:hidden tablet:block laptop:hidden desktop:block"src={logo}/>
+        <div className="min-h-screen flex items-center 
+        justify-center"> 
+        <div className="absolute top-0 right-0 mr-20 mt-4 logoC">
+                  <img className=" w-48 phone:hidden tablet:block laptop:block desktop:block"src={logo}/>
                  </div>
-                <div className="absolute w-5/12 m-auto box-border mt-8 rounded-lg">
-                <div className="pl-32 text-blue-800 font-bold text-3xl">
-                <h8>Comentarios:</h8>
+        
              
-                </div>
-                <div className="border-black  border-solid m-4 p-4 h-8">
-                <input className="border-2 border-gray-700" type="text" name="nombre" placeholder="Ingrese su nombre"></input>
-                <input className="mt-4 border-2 border-gray-700" type="email" name= "email" placeholder="Ingrese su correo"></input>
-                <div className="mt-4 ">
-                <textarea  type="text" name="Comentario" placeholder="Comentarios:"></textarea>
-                </div>
-                <br/>
-                <button3 className="bg-blue-900 hover:bg-blue-700 text-white text-center no-underline text-base cursor-pointer">Enviar</button3>
-                </div>
-                
-                    
-                
-                
-                
-                
-                </div>
+        <div className="absolute inset-y-7 left-48 bg-white p-16 rounded justify-center
+        w-1/2">
+        <h3 className="text-3xl font-bold text-blue-900 mb-10">Comentarios</h3>
+        
+        <form className="space-y-5">
+          <div>
+        <label className="block mb-1 font-bold text-blue-900">Nombre</label>
+        <input type="text" className="w-full border-2 border-gray-400
+        rounded outline-none focus:border-blue-400 py-1"/>
 
-                </div>
+        </div>
+
+        <div>
+        <label className="block mb-1 font-bold text-blue-900">Correo</label>
+        <input type="email" className="w-full border-2 border-gray-400
+        rounded outline-none focus:border-blue-400 py-1"/>
+        </div>
+
+        <div>
+        <input className="w-full h-28 placeholder-gray-500 border-2 border-gray-400
+        rounded outline-none focus:border-blue-400 py-1 px-4" placeholder="Comentario"/>
+        </div>
+
+        <button className="block w-full bg-blue-900 p-4 rounded 
+        hover:bg-blue-500 font-bold text-white">Enviar</button>
+
+
+        </form>
+        
+
+        </div>
+
+
+
+
         </div>
     )
 };

@@ -1,79 +1,57 @@
 import React, { useState } from 'react';
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import './Login.css';
-import logo from '../../assets/images/Fondo.jpg';
-import { Link } from 'react-router-dom'
+import logo from '../../assets/images/Fondo.png';
 
 
 
 
-
-
-export default function Login() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
-  
-    function handleSubmit(event) {
-      event.preventDefault();
-    }
+const Login = () => {
     
     return (
       
-      <div>
-      
-        
-      <div className=" h-full w-full">
-      <img className="fixed w-auto h-auto" src={logo}/> 
-      <div className=" static ml-96 mt-52 px-5 pt-11 inset-x-96 
-      absolute w-3/12 p-16 text-white rounded-none border-black border-solid
-      border-2 border-t-2 bg-black bg-opacity-50 ">       
-        <div className="relative text-white text-lg mb-4 pb-2">
-        <h1 className="text-white font-sans font-bold cursor-default">Iniciar Sesion</h1>
-        </div>
+      <div className="w-full h-full flex items-center
+      justify-center ">
        
-        <Form onSubmit={handleSubmit}>
-          <Form.Group size="lg" controlId="email">
-            <Form.Label>Correo: </Form.Label>
-            <div className="w-full h-10 mb-5 rounded text-black correo">
-            <Form.Control
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-         </div>
-          </Form.Group>
-          <Form.Group size="sm" controlId="password">
-            <Form.Label>Contraseña: </Form.Label>
-            <div className="block w-full h-10 mb-5 rounded text-black contraseña">
-            <Form.Control
-             autoFocus
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            </div>
-          </Form.Group>
-          <Link to="/Login">¿Olvide mi Contraseña?</Link>
-    <div className=" block m-auto  cursor-pointer text-white text-center hover:bg-blue-700 font-bold py-2 px-4 rounded bg-blue-900">
-    <Button className="font-bold" variant="primary" type="submit" >
-    Iniciar Sesion
-  </Button>
-  </div>
-  
-  <div className="block m-auto mt-5  cursor-pointer text-black text-center hover:bg-gray-300 font-bold py-2 px-4 rounded bg-gray-50 ">
-  <Button  variant="primary" type= "submit" href="/formulario">
-      Registrarme
-  </Button>
-  </div>
-
-  
-        </Form>
-        
-      </div>
-      </div>
+        <img src={logo}/> 
+     
       
-   </div>
+      
+     
+     <div className=" absolute inset-y-20 right-16  bg-black bg-opacity-50 p-16 my-10 rounded shadow-2xl w-1/3 h-2/3">
+       <h3 className="text-2xl font-bold mb-10 text-white">Iniciar Sesion</h3>
+      
+        <form className="space-y-4">
+
+         <div className="mb-2">
+
+           <label className="block mb-1 font-bold text-white"for="nombre">Correo:</label>
+           <input type="email" className="w-full border
+           border-gray-400 p-1 rounded outline-none
+           focus:border-blue-500"id="name"/>
+           </div>
+
+           <div>
+           <label className="block mb-1 font-bold text-white"for="nombre">Contraseña:</label>
+           <input type="password" className="w-full border
+           border-gray-400 p-1 rounded outline-none
+           focus:border-blue-500"id="name"/>
+           </div>
+
+           <div>
+           <label className="text-white cursor-pointer">¿Olvide Mi Contraseña?</label>
+           </div>
+
+           <button className="block w-full bg-blue-900 hover:bg-blue-500 p-4 rounded text-white
+           transition duration-300">Iniciar Sesion</button>
+           <button className="block w-full bg-white hover:bg-gray-500 p-4 rounded text-black font-semibold
+           transition duration-300" href="/formulario">Registrarme</button>
+        </form>
+
+
+     </div>
+      </div>
+   
     );
   }
+
+  export default Login;

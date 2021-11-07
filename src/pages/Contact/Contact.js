@@ -1,48 +1,74 @@
 import React from 'react';
 import './Contact.css';
+import sep from '../../assets/images/sep.png';
 
 const Contact = () => {
     return (
         <div>
                 
-                <div className="absolute w-5/12 m-auto box-border mt-8 rounded-lg">
-                <div className="absolute w-5/12 ml-8 m-auto box-border mt-8  m-4 p-4 h-8">
-                <h8 className="pl-32 text-blue-800 font-bold text-3xl" >Contacto</h8>
-                
-                <input className=" w-2/5 border-2 border-gray-700" type="text" name="nombre" placeholder="Nombre"></input>
-                <input className=" mt-4 border-2 border-gray-700" type="email" name= "email" placeholder="Correo"></input>
-                <input className="mt-4 border-2 border-gray-700" type= "text" name="asunto" placeholder="Asunto"></input>
-                <div className="mt-4">
-                <textarea type="text" name="mensaje" placeholder="Mensaje:"></textarea>
+                <h2 className="pt-8 pr-30 text-blue-800 font-bold text-4xl text-center">Contacto</h2>
+
+                <div className="absolute top-0 right-0 mt-5 mr-5">
+                <img className="w-40" src={sep} alt="sep"/>
                 </div>
-                <br/>
-                <button3 className="bg-blue-900 text-white text-center  text-base cursor-pointer">Enviar</button3>
-                <div className="absolute mt-32">
+            <form class="w-full max-w-sm absolute right-0 mt-28 mr-52">
+            <div className="w-full max-w-xs">
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
+                    Nombre
+                </label>
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Ingrese su nombre"></input>
+            </div>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" for="email">
+                    Correo
+                </label>
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Ingrese su correo"></input>
+                <p class="text-red-500 text-xs italic">Por favor ingrese su correo.</p>
+            </div>
+            <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
+                    Asunto
+                </label>
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type= "text" placeholder=""></input>
+            </div>
+            <div class="md:flex md:items-center">
+                <div class="md:w-1/3"></div>
+                <div class="md:w-2/3">
+                        <button class="shadow bg-green-400 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                            Enviar
+                        </button>
+                </div>
+            </div>
+            </div>
+                
+                
+        </form>
+                    <div className="absolute left-0 mt-32 ml-52">
                     <div className="icon-text">
-                    <i class="fas fa-map-marker-alt"></i> <span>Carretera Ixtaltepec -Comitancillo Km. 7.5 <br/>
+                    <i className="fas fa-map-marker-alt"></i> <span>Carretera Ixtaltepec -Comitancillo Km. 7.5 <br/>
                     San Pedro Comitancillo</span>
                     </div>
                     <br/>
                     <br/>
                     <div className="icon-text">
-                    <i className="FaBeer" aria-hidden="true"></i> <span>cc_comitancillo@tecnm.mx</span>
+                    <i className="far fa-envelope" aria-hidden="true"></i> <span>cc_comitancillo@tecnm.mx</span>
                     </div>
                     <br/>
                     <br/>
                     <div className="icon-text">
-                    <i class="" aria-hidden="true"></i> <span>(01 971) 717 21 09 <br/> (01 971) 717 21 10</span>
+                    <i className="fas fa-mobile-alt"></i> <span>(01 971) 717 21 09 <br/> (01 971) 717 21 10</span>
+                    <br/>
+                    <br/>
+                    <div className="">
+                    <i class="fab fa-facebook-square size:7x"></i> <i class="fab fa-twitter-square"></i> <i class="fab fa-instagram-square"></i> <i class="fab fa-whatsapp-square"></i>
                     </div>
+                    
                     </div>
-               
-                    </div>
-                
-                
-                
-                
-                </div>
-
-                
+                    </div>        
         </div>
+                
+       
     )
 };
 
