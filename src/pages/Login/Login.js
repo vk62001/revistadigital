@@ -12,12 +12,17 @@ const Login = () => {
       <div className="w-full h-full flex items-center
       justify-center ">
        
-        <img src={logo}/> 
+        
      
       
       
      
-     <div className=" absolute inset-y-20 right-16  bg-black bg-opacity-50 p-16 my-10 rounded shadow-2xl w-1/3 h-2/3">
+     <div className=" absolute inset-y-20  bg-black bg-opacity-50 p-16 my-10 
+     rounded shadow-2xl w-1/3 h-2/3 
+     laptop:block laptop:w-2/5 laptop:right-20 laptop:my-2
+     desktop:block desktop:w-1/3 desktop:right-16 desktop:my-8
+     tablet:block tablet:w-1/2 tablet:right-8 tablet:my-4
+     phone:block phone:w-10/12 phone:py-8" >
        <h3 className="text-2xl font-bold mb-10 text-white">Iniciar Sesion</h3>
       
         <form className="space-y-4">
@@ -27,6 +32,7 @@ const Login = () => {
            <label className="block mb-1 font-bold text-white"for="nombre">Correo:</label>
            <input type="email" className="w-full border
            border-gray-400 p-1 rounded outline-none
+           
            focus:border-blue-500"id="name"/>
            </div>
 

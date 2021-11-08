@@ -14,10 +14,18 @@ const Formulario = () => {
     
     <div className=" Formulario min-h-screen flex items-center
     justify-center bg-white">
-      <div className=" absolute inset-y-44 left-24">
+      <div className=" absolute inset-y-44 left-24
+      laptop:block laptop:w-1/3 laptop:left-28 laptop:my-2
+      desktop:block desktop:w-2/5 desktop:left-24 desktop:p-8
+      tablet:block tablet:w-1/3 tablet:left-16 tablet:my-20
+      phone:block phone:w-1/4 phone:left-6 phone:my-28">
       <img className="w-full" src={revista}/>
       </div>
-      <div className=" absolute inset-y-20 right-16 bg-white p-16 rounded shadow-2x1 w-1/3">
+      <div className=" absolute inset-y-20 right-16 bg-white p-16 rounded shadow-2x1 w-1/3
+      laptop:block laptop:w-2/5 laptop:right-8 laptop:my-2
+      desktop:block desktop:w-1/3 desktop:right-16 desktop:my-8
+      tablet:block tablet:w-1/2 tablet:right-8 tablet:my-4
+      phone:block phone:w-auto phone:p-8 phone:right-0">
         
       <h1 className="text-3xl font-bold mb-10 text-blue-900">Crear Una Cuenta</h1>
 
