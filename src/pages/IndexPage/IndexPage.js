@@ -23,10 +23,10 @@ const IndexPage = () => {
                     <div clasName="">
                      <div className="absolute top-0 right-0 mt-64 mr-20">
                       <img className="w-96 
-                                        phone:block phone:w-1/3 phone:fixed phone:left-6 phone:bottom-10
-                                        tablet:block tablet:w-1/3 tablet:fixed tablet:left-6 tablet:bottom-10 
-                                        laptop:block laptop:w-1/4 laptop:fixed laptop:right-6 laptop:bottom-10
-                                        desktop:block desktop:w-1/3 desktop:fixed desktop:right-6" src={logo1} alt="logo" />
+                                        phone:block phone:w-1/3 phone:fixed phone:left-1/3 phone:bottom-10
+                                        tablet:block tablet:w-1/3 tablet:fixed tablet:left-1/3 tablet:bottom-10 
+                                        laptop:block laptop:w-1/3 laptop:left-auto laptop:right-8 laptop:bottom-2/4
+                                        desktop:block desktop:w-1/3 desktop:left-2/3 desktop:right-8 dektop:mt-8 desktop:bottom-auto" src={logo1} alt="logo" />
                     </div>
                       </div>
                     </div>
@@ -43,7 +43,7 @@ const IndexPage = () => {
                         <br/>
                         <div className="phone:grid phone:grid-cols-2 phone:gap-4 phone:w-11/12 
                                         tablet:grid tablet:grid-cols-2 tablet:gap-4 tablet:w-11/12  
-                                        laptop:w-1/3 desktop:w-2/5 laptop:bg-red-100">
+                                        laptop:w-1/3 desktop:w-2/5 ">
                                             
                                 <Link 
                                     className="phone:py-2 rounded-full bg-white phone:text-2xl text-center"
