@@ -26,7 +26,7 @@ const IndexPage = () => {
                                         phone:block phone:w-1/3 phone:fixed phone:left-1/3 phone:bottom-10
                                         tablet:block tablet:w-1/3 tablet:fixed tablet:left-1/3 tablet:bottom-10 
                                         laptop:block laptop:w-1/3 laptop:left-auto laptop:right-8 laptop:bottom-2/4
-                                        desktop:block desktop:w-1/3 desktop:left-2/3 desktop:right-8 dektop:mt-8 desktop:bottom-auto" src={logo1} alt="logo" />
+                                        desktop:block desktop:w-1/3 desktop:left-/4 desktop:right-8 dektop:mt-8 desktop:bottom-auto" src={logo1} alt="logo" />
                     </div>
                       </div>
                     </div>
