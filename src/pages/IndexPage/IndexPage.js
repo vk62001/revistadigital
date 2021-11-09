@@ -46,12 +46,14 @@ const IndexPage = () => {
                                         laptop:w-1/3 desktop:w-2/5 ">
                                             
                                 <Link 
-                                    className="phone:py-2 rounded-full bg-white phone:text-2xl text-center"
+                                    className="phone:py-2 rounded-full bg-white phone:text-2xl text-center
+                                    bg-white p-4 hover:bg-blue-500"
                                 >
                                     Registrar
                                 </Link>
                                 <Link 
-                                    className="phone:py-2 rounded-full bg-white phone:text-2xl text-center"
+                                    className="phone:py-2 rounded-full bg-white phone:text-2xl text-center
+                                    bg-white p-4 hover:bg-blue-500"
                                 >
                                     Ver Más
                                 </Link>
