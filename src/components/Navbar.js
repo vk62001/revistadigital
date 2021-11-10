@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
+import BackDroop from '../UXComponents/BackDroop';
 
 const NavBar = props => {
+    const [menu, setMenu] = useState(false);
+
+    const openMenu = () =>{
+        setMenu(!menu);
+    }
 
     return (
         <div className="h-1/4 flex w-full px-2 desktop:px-0">
@@ -11,7 +16,11 @@ const NavBar = props => {
                  flex">
                       </p>
                     <div  className=" block desktop:hidden laptop:hidden tablet:hidden px-2 py-4">
-                        <i className="fas fa-bars text-white" id="mobile-menu"></i>
+                        <i 
+                            className="fas fa-bars text-white" 
+                            id="mobile-menu"
+                            onClick={openMenu}
+                        ></i>
                     </div>
                
             </div>
@@ -26,35 +35,34 @@ const NavBar = props => {
                         <p className="m-0 text-xs"></p>
                 </Link>
                 <Link to={"/editions"} className={"p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
-                     <i className="fas fa-book-open"></i>
-                     <p className="m-0 text-xs ml-1">Ediciones</p>
+                        <i className="fas fa-book-open"></i>
+                        <p className="m-0 text-xs ml-1">Ediciones</p>
                      </Link>
                      <Link to={"/about"} className={"p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
-                     <i className="fas fa-bookmark"></i>
-                     <p className="m-0 text-xs ml-1 ">Sobre la Revista</p>
+                        <i className="fas fa-bookmark"></i>
+                        <p className="m-0 text-xs ml-1 ">Sobre la Revista</p>
                      </Link>
                      <Link to={"/comments"} className={"p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
-                     <i className="fas fa-comment-dots"></i>
-                     <p className="m-0 text-xs ml-1">Comentarios</p>
+                        <i className="fas fa-comment-dots"></i>
+                        <p className="m-0 text-xs ml-1">Comentarios</p>
                      </Link>
                      <Link to={"/contact"} className={"p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
-                     <i className="fas fa-address-card"></i>
-                     <p className="m-0 text-xs ml-1">Contacto</p>
-                     </Link>
-                
-    
-                
-                    
+                        <i className="fas fa-address-card"></i>
+                        <p className="m-0 text-xs ml-1">Contacto</p>
+                     </Link>            
                 </ul>
-                
-                
             </div>
-                     
-          
+            {menu && 
+                <div className="h-screen w-1/3 bg-white z-30 absolute left-0 top-0">
+                    <menu></menu>
+                </div>
+            }
+            <BackDroop 
+                menu = {menu}
+                openMenu = {openMenu}
+            />
         </div>
-        
     );
 };
 
 export default NavBar;
-<script src="App.js"defer></script>  

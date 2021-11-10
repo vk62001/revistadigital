@@ -20,7 +20,7 @@ const IndexPage = () => {
                 <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-900">
                     <NavBar />
                     <div>
-                    <div clasName="">
+                    <div className="">
                      <div className="absolute top-0 right-0 mt-64 mr-20">
                       <img className="w-96 
                                         phone:block phone:w-1/3 phone:fixed phone:left-1/3 phone:bottom-10

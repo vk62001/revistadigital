@@ -17,7 +17,7 @@ const About = () => {
                     </div>
                
             </div>
-            <div clasName="container mx-auto">
+            <div className="container mx-auto">
             <div className="ml-44 p-10 mt-4 cursor-default">
            <h8 class="mb-1 font-sans text-3xl font-bold text-blue-800">Objetivos</h8>
            <p class="mb-1 mt-10 font-sans text-4x2 font-bold text-green-600">Enfoque y alcance</p>
