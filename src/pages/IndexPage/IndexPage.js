@@ -10,7 +10,7 @@ const IndexPage = () => {
     return (
         <div>
             
-            <h2 className="titulo font-sans text-7xl font-bold uppercase">Revista <br /> Digital<br/>
+            <h2 className="titulo font-sans text-7xl font-bold uppercase z-0">Revista <br /> Digital<br/>
             
            </h2>
          

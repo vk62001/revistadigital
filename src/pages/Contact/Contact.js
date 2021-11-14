@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <div>
                 
-                <h2 className="pt-8 pr-30 text-blue-800 font-bold text-4xl text-center">Contacto</h2>
+                <h2 className="pt-8 pr-30 text-blue-900 font-bold text-4xl text-center">Contacto</h2>
 
                 <div className="absolute top-0 right-0 mt-5 mr-5">
                 <img className="w-40
@@ -15,10 +15,11 @@ const Contact = () => {
                                 laptop:block laptop:w-1/8 laptop:fixed laptop:right-6
                                 desktop: block desktop:w-1/6 desktop:fixed desktop:right-0" src={sep} alt="sep"/>
                 </div>
-            <form class="w-full max-w-sm absolute right-0 mt-28 mr-52
-                         phone:block phone:w-1/3 phone:left-26
+            <form class="w-full max-w-sm absolute right-0 mt-8 mr-52
+                         phone:block phone:w-full phone:left-20
                          tablet:block tablet:w-1/3 tablet:left-26
-                         laptop:block laptop:w-1/4 laptop:right-0">
+                         laptop:block laptop:w-1/4 laptop:right-0
+                         desktop:block desktop:1/2">
             <div className="w-full max-w-xs">
             <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
@@ -37,12 +38,12 @@ const Contact = () => {
                 <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
                     Asunto
                 </label>
-                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type= "text" placeholder=""></input>
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type= "text" placeholder="Asunto"></input>
             </div>
             <div class="flex items-center">
                 <div class="w-1/3"></div>
                 <div class="w-2/3 phone:py-4 px-28">
-                        <button class="shadow bg-green-400 hover:bg-green-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                        <button class="shadow bg-blue-900 hover:bg-blue-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
                             Enviar
                         </button>
                 </div>

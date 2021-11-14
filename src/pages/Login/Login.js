@@ -15,7 +15,7 @@ const Login = () => {
         
      
       
-      
+       <img src={logo}/>
      
      <div className=" absolute inset-y-20  bg-black bg-opacity-50 p-16 my-10 
      rounded shadow-2xl w-1/3 h-2/3 
