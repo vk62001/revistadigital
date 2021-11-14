@@ -13,7 +13,7 @@ const IndexPage = () => {
                 <div className="fixed h-full w-full">
                 <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-900">
                     <NavBar />
-                    <h2 className="font-sans text-7xl font-bold uppercase text-white text-center">Revista <br /> Digital<br/></h2>
+                    <h2 className="font-sans text-7xl font-bold uppercase fixed left-0 right-0 m-auto text-center text-white mt-24">Revista <br /> Digital<br/></h2>
                     <div>
                     <div className="">
                      <div className="absolute top-0 right-0 mt-64 mr-20">
@@ -26,7 +26,7 @@ const IndexPage = () => {
                       </div>
                     </div>
                     <div>
-                        <div className="absolute ml-24 phone:ml-4 phone:-my-20 
+                        <div className="absolute ml-24 phone:ml-4 phone:-my- 
                                               tablet:ml-10 tablet:mr-10 tablet:my-2">
                         <h2 className=" text center text-white font-sans text-7xl">
                             Bienvenido

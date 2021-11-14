@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <div>
                 <NavBar />
-                <h2 className="pt-8 pr-30 text-blue-900 font-bold text-4xl text-center">Contacto</h2>
+                <h2 className="pt-8 pl-96 text-blue-900 font-bold text-4xl text-center">Contacto</h2>
                 
                 <div className="absolute top-0 right-0 mt-5 mr-5">
                 <img className="w-40
@@ -57,7 +57,7 @@ const Contact = () => {
                     phone:block phone:w-1/2 phone:-bottom-10 phone:left-0 phone:ml-20
                     tablet:block tablet:w-1/2 tablet:-bottom-2/4 tablet:left-24 tablet:ml-20
                     laptop:block laptop:w-1/2 laptop:left-0 laptop:bottom-20
-                    desktop:block desktop:w-1/2 desktop:left-10 desktop:bottom-8">
+                    desktop:block desktop:w-1/2 desktop:left-20 desktop:my-96">
                     <div className="icon-text">
                     <i className="fas fa-map-marker-alt"></i> <span>Carretera Ixtaltepec -Comitancillo Km. 7.5 <br/>
                     San Pedro Comitancillo</span>
@@ -73,7 +73,7 @@ const Contact = () => {
                     <i className="fas fa-mobile-alt"></i> <span>(01 971) 717 21 09 <br/> (01 971) 717 21 10</span>
                     <br/>
                     <br/>
-                    <i class="fab fa-facebook-square"></i> <i class="fab fa-twitter-square"></i> <i class="fab fa-instagram-square"></i> <i class="fab fa-whatsapp-square"></i>
+                    <i class="fab fa-facebook-square cursor-pointer"></i> <i class="fab fa-twitter-square cursor-pointer"></i> <i class="fab fa-instagram-square cursor-pointer"></i> <i class="fab fa-whatsapp-square cursor-pointer"></i>
                     </div>
                     </div>        
         </div>

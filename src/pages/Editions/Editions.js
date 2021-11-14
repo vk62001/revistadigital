@@ -1,11 +1,12 @@
 import React from 'react';
 import './Editions.css';
 import logo from '../../assets/images/Revista.png';
+import NavBar from '../../components/Navbar';
 
 const Editions = () => {
     return (
         <div>
-           
+          
             <div className="containe  mx-auto
             ">
             <div className="ml-80 mt-6">
@@ -17,7 +18,7 @@ const Editions = () => {
            <h4 className="text-center text-blue-700 font-semibold"> #1 SEP-FEB 2021</h4>
            <img className=" left-24  desktop:block laptop:block ml-72
            laptop:block laptop:w-1/3 laptop:mx-8 laptop:my-0
-           desktop:block desktop:w-1/4 desktop:mx-48 desktop:my-0
+           desktop:block desktop:w-1/6 desktop:mx-72 desktop:my-0
            tablet:block tablet:w-1/3 tablet:-mx-3 tablet:my-12
            phone:block phone:w-1/4 phone:left-6 phone:my-28" src={logo}/>
              <div className="absolute inset-x-32 top-32 inset-y-0 right">
