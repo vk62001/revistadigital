@@ -17,7 +17,7 @@ const Contact = () => {
                                 desktop: block desktop:w-1/6 desktop:fixed desktop:right-0" src={sep} alt="sep"/>
                 </div>
             <form class="w-full max-w-sm absolute right-0 mt-8 mr-52
-                         phone:block phone:w-full phone:left-20
+                         phone:block phone:w-1/2 phone:left-20
                          tablet:block tablet:w-1/3 tablet:left-26
                          laptop:block laptop:w-1/4 laptop:right-0
                          desktop:block desktop:1/2 desktop:left-auto">
@@ -54,7 +54,7 @@ const Contact = () => {
                 
         </form>
                     <div className="absolute left-0 mt-32 ml-52
-                    phone:block phone:w-1/2 phone:-bottom-full phone:left-0 phone:ml-20
+                    phone:block phone:w-1/2 phone:-bottom-10 phone:left-0 phone:ml-20
                     tablet:block tablet:w-1/2 tablet:-bottom-2/4 tablet:left-24 tablet:ml-20
                     laptop:block laptop:w-1/2 laptop:left-0 laptop:bottom-20
                     desktop:block desktop:w-1/2 desktop:left-10 desktop:bottom-8">

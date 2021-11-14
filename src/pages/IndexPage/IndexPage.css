@@ -53,16 +53,7 @@
   height: 35%;
 }
 
-.titulo{
-  position: fixed;
-  top: 10%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  z-index: 2;
-  color: white;
-}
+
 
 .logotec{
   position: fixed;
