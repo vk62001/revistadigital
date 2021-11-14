@@ -5,6 +5,7 @@ import logo from '../../assets/images/Revista.png';
 const Editions = () => {
     return (
         <div>
+           
             <div className="containe  mx-auto
             ">
             <div className="ml-80 mt-6">

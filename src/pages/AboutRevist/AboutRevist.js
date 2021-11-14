@@ -8,6 +8,8 @@ const About = () => {
     return (
         
         <div>
+             
+
             <div className="desktop:w-1/2 laptop:w-1/2 tablet:w-0 phone:w-full cursor-pointer">
                 <p className="desktop:hidden laptop:hidden tablet:hidden phone:block text-white
                  flex">

@@ -1,13 +1,14 @@
 import React from 'react';
 import './Contact.css';
 import sep from '../../assets/images/sep.png';
+import NavBar from '../../components/Navbar';
 
 const Contact = () => {
     return (
         <div>
-                
+                <NavBar />
                 <h2 className="pt-8 pr-30 text-blue-900 font-bold text-4xl text-center">Contacto</h2>
-
+                
                 <div className="absolute top-0 right-0 mt-5 mr-5">
                 <img className="w-40
                                 phone:hidden
@@ -19,7 +20,7 @@ const Contact = () => {
                          phone:block phone:w-full phone:left-20
                          tablet:block tablet:w-1/3 tablet:left-26
                          laptop:block laptop:w-1/4 laptop:right-0
-                         desktop:block desktop:1/2">
+                         desktop:block desktop:1/2 desktop:left-auto">
             <div className="w-full max-w-xs">
             <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
