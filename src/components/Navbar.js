@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import BackDroop from '../UXComponents/BackDroop';
 
 const NavBar = props => {
+    const white = props.white
     const [menu, setMenu] = useState(false);
 
     const openMenu = () =>{
@@ -26,7 +27,7 @@ const NavBar = props => {
             </div>
             <div id="menu" className="desktop:w-1/2 tablet:w-full tablet:block phone:hidden hidden ">
                 <ul  className="flex justify-center items-center">
-                <Link to={"/" }  className={'p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
+                <Link to={"/" }  className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
                         <i className="fas fa-home"></i>
                         <p className="m-0 text-xs ml-2">Inicio</p>
                 </Link>
