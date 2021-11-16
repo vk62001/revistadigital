@@ -6,7 +6,9 @@ import NavBar from '../../components/Navbar';
 const Contact = () => {
     return (
         <div>
-                 <NavBar />
+                 <NavBar 
+                    white={false}
+                 />
                 <h2 className="pt-0 pl-0 text-blue-900 font-bold text-4xl text-center">Contacto</h2>
                 
                 <div className="absolute top-0 right-0 mt-5 mr-5">
