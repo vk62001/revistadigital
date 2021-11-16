@@ -15,7 +15,7 @@ const IndexPage = () => {
                     <NavBar 
                         white={true}
                     />
-                    <h2 className="font-sans text-7xl font-bold uppercase fixed left-0 right-0 m-auto text-center text-white mt-12">Revista <br /> Digital<br/></h2>
+                    <h2 className="font-sans text-7xl font-bold uppercase fixed left-0 right-0 m-auto text-center text-white mt-28">Revista <br /> Digital<br/></h2>
                     <div>
                     <div className="">
                      <div className="absolute top-0 right-0 mt-64 mr-20">
@@ -47,7 +47,7 @@ const IndexPage = () => {
                                     className="phone:py-2 rounded-full bg-white phone:text-2xl text-center
                                     bg-white p-4 hover:bg-blue-500"
                                 >
-                                    Registrar
+                                    Registrarse
                                 </Link>
                                 <Link 
                                     className="phone:py-2 rounded-full bg-white phone:text-2xl text-center

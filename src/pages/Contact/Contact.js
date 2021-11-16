@@ -18,7 +18,7 @@ const Contact = () => {
                                 laptop:block laptop:w-1/8 laptop:fixed laptop:right-6
                                 desktop: block desktop:w-1/6 desktop:fixed desktop:right-0" src={sep} alt="sep"/>
                 </div>
-            <form class="w-full absolute right-0 mt-8 mr-52 bg-gray-600 bg-opacity-50 shadow rounded
+            <form class="w-full absolute right-0 mt-8 mr-52 bg-white bg-opacity-50 shadow rounded
                          phone:block phone:w-1/2 phone:left-20
                          tablet:block tablet:w-1/3 tablet:left-52
                          laptop:block laptop:w-1/4 laptop:left-auto

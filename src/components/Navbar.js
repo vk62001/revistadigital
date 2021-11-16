@@ -17,7 +17,7 @@ const NavBar = props => {
                       </p>
                     <div  className="block desktop:hidden laptop:hidden tablet:hidden px-2 py-4">
                         <i 
-                            className={(white ? 'text-white':'text-blue-600') + " fas fa-bars text-white"}
+                            className={(white ? 'text-white':'text-blue-900') + " fas fa-bars text-white"}
                             id="mobile-menu"
                             onClick={openMenu}
                         ></i>
@@ -32,7 +32,7 @@ const NavBar = props => {
                 </Link>
                 <Link to={"/login" }  className={(white ? 'text-white':'text-blue-600') + ' p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
                         <i className="fas fa-user"></i>
-                        <p className="m-0 text-xs ml-2">Iniciar sesión</p>
+                        <p className="m-0 text-xs ml-2"></p>
                 </Link>
                 <Link to={"/editions"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
                         <i className="fas fa-book-open"></i>
@@ -60,9 +60,9 @@ const NavBar = props => {
                         <i className="fas fa-home"></i>
                         <p className="m-0 text-xs ml-2">Inicio</p>
                 </Link>
-                <Link to={"/login" }  className={'p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
+                <Link to={"/login" }  className={'p-4 text-black cursor-pointer text-center hover:border-white hover:border-b-2 border__white flex'}>
                         <i className="fas fa-user"></i>
-                        <p className="m-0 text-xs">Iniciar sesión</p>
+                        <p className="m-0 text-xs"></p>
                 </Link>
                 <Link to={"/editions"} className={"p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
                         <i className="fas fa-book-open"></i>

@@ -1,11 +1,17 @@
 import React from 'react';
 import './Comments.css';
 import logo from '../../assets/images/logo.png';
+import NavBar from '../../components/Navbar';
 
 const Comments = () => {
     return (
-        <div className="min-h-screen flex items-center 
-        justify-center"> 
+      
+        <div> 
+          <NavBar 
+                    white={false}
+                 />
+         
+        
         <div className="absolute top-0 right-0 mr-20 mt-4 logoC
        tablet:block tablet:w-1/4 tablet:right-1 tablet:pl-8">
                   <img className=" w-48 phone:hidden tablet:block laptop:block desktop:block"src={logo}/>

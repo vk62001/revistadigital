@@ -2,23 +2,19 @@
 import React from 'react';
 import logo1 from '../../assets/images/logo.png';
 import sep from '../../assets/images/sep.png';
-
+import NavBar from '../../components/Navbar';
 
 const About = () => {
     return (
         
         <div>
              
-
-            <div className="desktop:w-1/2 laptop:w-1/2 tablet:w-0 phone:w-full cursor-pointer">
-                <p className="desktop:hidden laptop:hidden tablet:hidden phone:block text-white
-                 flex">
-                      </p>
-                    <div  className=" block desktop:hidden laptop:hidden tablet:hidden px-2 py-4">
-                        <i className="fas fa-bars text-blue-900" id="mobile-menu"></i>
-                    </div>
+             <NavBar 
+                    white={false}
+                 />
+        
                
-            </div>
+            
             <div className="container mx-auto">
             <div className="ml-44 p-10 mt-4 cursor-default">
            <h8 class="mb-1 font-sans text-3xl font-bold text-blue-800">Objetivos</h8>
