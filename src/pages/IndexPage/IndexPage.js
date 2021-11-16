@@ -12,7 +12,9 @@ const IndexPage = () => {
                 <img className="logotec phone:hidden laptop:block" src={LogoTect} alt="logotec" />
                 <div className="fixed h-full w-full">
                 <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-900">
-                    <NavBar />
+                    <NavBar 
+                        white={true}
+                    />
                     <h2 className="font-sans text-7xl font-bold uppercase fixed left-0 right-0 m-auto text-center text-white mt-12">Revista <br /> Digital<br/></h2>
                     <div>
                     <div className="">
