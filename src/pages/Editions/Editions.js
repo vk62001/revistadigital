@@ -9,6 +9,9 @@ const Editions = () => {
           
             <div className="containe  mx-auto
             ">
+                 <NavBar 
+                    white={false}
+                 />
             <div className="text-center">
             <h3 className="mb-1 font-sans text-3xl text-blue-900 font-bold 
             " >Ediciones</h3>
