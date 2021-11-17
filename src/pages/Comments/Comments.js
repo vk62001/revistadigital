@@ -28,16 +28,16 @@ const Comments = () => {
         
         <form className="space-y-5">
           <div>
-        <label className="block mb-1 font-bold text-blue-900">Nombre</label>
+        <label className="block mb-1 font-bold text-blue-900" >Nombre</label>
         <input type="text" className="w-full border-2 border-gray-400
-        rounded outline-none focus:border-blue-400 py-1"/>
+        rounded outline-none focus:border-blue-400 py-1" placeholder="Ingrese su nombre"/>
 
         </div>
 
         <div>
         <label className="block mb-1 font-bold text-blue-900">Correo</label>
         <input type="email" className="w-full border-2 border-gray-400
-        rounded outline-none focus:border-blue-400 py-1"/>
+        rounded outline-none focus:border-blue-400 py-1 "placeholder="Ingrese su correo"/>
         </div>
 
         <div>

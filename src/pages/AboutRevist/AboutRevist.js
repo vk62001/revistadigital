@@ -15,9 +15,13 @@ const About = () => {
         
                
             
-            <div className="container mx-auto">
-            <div className="ml-44 p-10 mt-4 cursor-default">
-           <h8 class="mb-1 font-sans text-3xl font-bold text-blue-800">Objetivos</h8>
+            <div className="container">
+            <div className="ml-44 p-10 mt-4 cursor-default
+            laptop:block laptop:w-3/4 laptop:mx-40 laptop:my-0
+            desktop:block desktop:w-2/3 desktop:mx-72 desktop:my-0
+            tablet:block tablet:w-4/5 tablet:mx-20 tablet:my-20
+            phone:block phone:w-full phone:mx-8 phone:-my-4">
+           <h8 class="mb-1 font-sans text-3xl font-bold text-blue-900">Objetivos</h8>
            <p class="mb-1 mt-10 font-sans text-4x2 font-bold text-green-600">Enfoque y alcance</p>
            <p className=" mt-10 ">
            La Revista Digital Universitaria es una publicación electrónica bimestral de comunicación social de la ciencia, dirigida <br/>
@@ -44,7 +48,7 @@ const About = () => {
              </p>
              </div>
              <div className=" absolute left-0 top-0 mt-5 ml-6">
-           <img className="w-40 logocomi phone:block tablet:block laptop:block desktop:block" src={logo1} alt="logo" />
+           <img className="w-40 logocomi phone:hidden tablet:block laptop:block desktop:block" src={logo1} alt="logo" />
            </div>
            <div className=" absolute top-0 right-0 mr-20 mt-8">
            <img className="w-40 logosep phone:hidden tablet:block laptop:block desktop:block" src={sep} alt="sep" />

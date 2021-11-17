@@ -21,9 +21,9 @@ const IndexPage = () => {
                      <div className="absolute top-0 right-0 mt-64 mr-20">
                       <img className="w-96 
                                         phone:block phone:w-1/3 phone:fixed phone:left-1/3 phone:bottom-2
-                                        tablet:block tablet:w-1/4 tablet:fixed tablet:left-3/4 tablet:bottom-44 
-                                        laptop:block laptop:w-1/3 laptop:left-auto laptop:right-8 laptop:bottom-20
-                                        desktop:block desktop:w-1/4 desktop:left-/4 desktop:right-8 dektop:mt-8 desktop:bottom-auto" src={logo1} alt="logo" />
+                                        tablet:block tablet:w-1/4 tablet:fixed tablet:left-3/5 tablet:bottom-10 
+                                        laptop:block laptop:w-1/3 laptop:left-auto laptop:right-8 laptop:bottom-96
+                                        desktop:block desktop:w-1/4 desktop:left-2/5 desktop:right-20 dektop:mt-8 desktop:bottom-1/3" src={logo1} alt="logo" />
                     </div>
                       </div>
                     </div>
