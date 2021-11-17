@@ -45,7 +45,7 @@ const IndexPage = () => {
                                             
                                 <Link 
                                     className="phone:py-2 rounded-full bg-white phone:text-2xl text-center
-                                    bg-white p-4 hover:bg-blue-500"
+                                    bg-white p-3 hover:bg-blue-500"
                                 >
                                     Registrarse
                                 </Link>
