@@ -12,7 +12,7 @@ const Comments = () => {
                  />
          
         
-        <div className="absolute top-0 right-0 mr-20 mt-4 logoC
+        <div className="absolute top-0 right-0 mr-20 mt-14 logoC
        tablet:block tablet:w-1/4 tablet:right-1 tablet:pl-8">
                   <img className=" w-48 phone:hidden tablet:block laptop:block desktop:block"src={logo}/>
                  </div>

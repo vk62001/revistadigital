@@ -43,13 +43,13 @@ const IndexPage = () => {
                                         tablet:grid tablet:grid-cols-2 tablet:gap-4 tablet:w-11/12  
                                         laptop:w-5/6 desktop:w-11/12">
                                             
-                                <Link 
+                                <Link  to="/formulario"
                                     className="phone:py-2 rounded-full bg-white phone:text-2xl text-center
                                     bg-white p-3 hover:bg-blue-500"
                                 >
                                     Registrarse
                                 </Link>
-                                <Link 
+                                <Link to="/about"
                                     className="phone:py-2 rounded-full bg-white phone:text-2xl text-center
                                     bg-white p-4 hover:bg-blue-500"
                                 >

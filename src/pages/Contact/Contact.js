@@ -19,29 +19,29 @@ const Contact = () => {
                                 desktop: block desktop:w-1/6 desktop:fixed desktop:right-0" src={sep} alt="sep"/>
                 </div>
             <form class="w-full absolute right-0 mt-8 mr-52 bg-white bg-opacity-50 shadow rounded
-                         phone:block phone:w-1/2 phone:left-20
-                         tablet:block tablet:w-1/3 tablet:left-52
-                         laptop:block laptop:w-1/4 laptop:left-auto
+                         phone:block phone:w-2/3 phone:left-14
+                         tablet:block tablet:w-1/2 tablet:left-44
+                         laptop:block laptop:w-1/3 laptop:left-1/2
                          desktop:block desktop:1/2 desktop:left-auto">
             <div className="w-full">
             <div className="mb-4">
                 <label className="block text-blue-900 text-sm font-bold mb-2" for="username">
                     Nombre
                 </label>
-                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text phone:w-full" placeholder="Ingrese su nombre"></input>
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:border-blue-400 focus:outline-none focus:shadow-outline" id="username" type="text phone:w-full" placeholder="Ingrese su nombre"></input>
             </div>
             <div className="mb-4">
                 <label className="block text-blue-900 text-sm font-bold mb-2" for="email">
                     Correo
                 </label>
-                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Ingrese su correo"></input>
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-400 focus:shadow-outline" id="email" type="email" placeholder="Ingrese su correo"></input>
                 <p class="text-red-500 text-xs italic phone:hidden">Por favor ingrese su correo.</p>
             </div>
             <div className="mb-4">
                 <label className="block text-blue-900 text-sm font-bold mb-2" for="username">
                     Asunto
                 </label>
-                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type= "text" placeholder="Asunto"></input>
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-400 focus:shadow-outline" type= "text" placeholder="Asunto"></input>
             </div>
             <div class="flex items-center">
                 <div class="w-1/3"></div>
@@ -56,8 +56,8 @@ const Contact = () => {
                 
         </form>
                     <div className="absolute left-0 mt-32 ml-52
-                    phone:block phone:w-1/2 phone:-bottom-96 phone:left-0 phone:ml-20
-                    tablet:block tablet:w-1/2 tablet:-bottom-2/4 tablet:left-24 tablet:ml-20
+                    phone:block phone:w-1/2 phone:-bottom-0 phone:left-0 phone:ml-20
+                    tablet:block tablet:w-1/2 tablet:bottom-20 tablet:left-24 tablet:ml-20
                     laptop:block laptop:w-1/2 laptop:left-0 laptop:bottom-20
                     desktop:block desktop:w-1/2 desktop:left-20 desktop:my-0">
                     <div className="icon-text">
