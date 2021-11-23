@@ -36,10 +36,10 @@ const Contact = () => {
                         </div>
                     
                         <div className="absolute left-0 mt-32 ml-52
-                        phone:block phone:w-1/2 phone:-bottom-16 phone:left-0 phone:ml-20
+                        phone:block phone:w-1/2 phone:-bottom-36 phone:left-0 phone:ml-20
                         tablet:block tablet:w-1/2 tablet:bottom-0 tablet:left-20 tablet:ml-20
                         laptop:block laptop:w-1/2 laptop:left-0 laptop:bottom-20
-                        desktop:block desktop:w-1/2 desktop:left-20 desktop:my-96">
+                        desktop:block desktop:w-1/2 desktop:left-20 desktop:my-0">
                         <div className="icon-text">
                         <i className="fas fa-map-marker-alt"></i> <span>Carretera Ixtaltepec -Comitancillo Km. 7.5 <br/>
                         San Pedro Comitancillo</span>
