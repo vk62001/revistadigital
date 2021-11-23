@@ -30,19 +30,19 @@ const Comments = () => {
           <div>
         <label className="block mb-1 font-bold text-blue-900" >Nombre</label>
         <input type="text" className="w-full border-2 border-gray-400
-        rounded outline-none focus:border-blue-400 py-1" placeholder="Ingrese su nombre"/>
+        rounded outline-none focus:ring-2 focus:ring-blue-600 py-1" placeholder="Ingrese su nombre"/>
 
         </div>
 
         <div>
         <label className="block mb-1 font-bold text-blue-900">Correo</label>
         <input type="email" className="w-full border-2 border-gray-400
-        rounded outline-none focus:border-blue-400 py-1 "placeholder="Ingrese su correo"/>
+        rounded outline-none focus:ring-2 focus:ring-blue-600 py-1 "placeholder="Ingrese su correo"/>
         </div>
 
         <div>
         <input className="w-full h-28 placeholder-gray-500 border-2 border-gray-400
-        rounded outline-none focus:border-blue-400 py-1 px-4" placeholder="Comentario"/>
+        rounded outline-none focus:ring-2 focus:ring-blue-600 py-1 px-4" placeholder="Comentario"/>
         </div>
 
         <button className="block w-full bg-blue-900 p-4 rounded 
