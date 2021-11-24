@@ -23,7 +23,7 @@ const Comments = () => {
         laptop:block laptop:w-1/2 laptop:left-28 laptop:my-8
         desktop:block desktop:w-2/5 desktop:right-16 desktop:my-8
         tablet:block tablet:w-3/5 tablet:left-8 tablet:my-8
-        phone:block phone:w-full phone:p-8 phone:left-0 phone:mt-8">
+        phone:block phone:w-11/12 phone:p-8 phone:left-3 phone:mt-8">
         <h3 className="text-3xl font-sans font-bold uppercase text-blue-900 mb-10">Comentarios</h3>
         
         <form className="space-y-5">

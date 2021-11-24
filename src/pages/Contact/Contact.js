@@ -23,7 +23,7 @@ const Contact = () => {
                             laptop:block laptop:w-full laptop:right-2 laptop:my-2
                             desktop:block desktop:w-full desktop:right-16 desktop:my-8
                             tablet:block tablet:w-full tablet:-left-8 tablet:my-4
-                            phone:block phone:w-full phone:p- phone:left-24">
+                            phone:block phone:w-11/12  phone:left-28">
                                 <h2 className="text-3xl text-center mb-5 text-blue-900 font-sans font-bold uppercase">Contacto</h2>
                                 <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600" type="text" placeholder="Ingrese su nombre"/>
                                 <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600" type="email" placeholder="Ingrese su correo"/>
@@ -36,7 +36,7 @@ const Contact = () => {
                         </div>
                     
                         <div className="absolute left-0 mt-32 ml-52
-                        phone:block phone:w-1/2 phone:-bottom-36 phone:left-0 phone:ml-20
+                        phone:block phone:w-1/2 phone:-bottom-56 phone:left-0 phone:ml-20
                         tablet:block tablet:w-1/2 tablet:-bottom-26 tablet:left-20 tablet:ml-20
                         laptop:block laptop:w-1/2 laptop:left-0 laptop:bottom-20
                         desktop:block desktop:w-1/2 desktop:left-20 desktop:my-0">

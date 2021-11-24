@@ -55,8 +55,8 @@ const NavBar = props => {
                 </ul>
             </div>
             {menu && 
-                <div className=" h-screen w-1/2 bg-white z-30 absolute left-0 top-0 transform -transalate-x-full
-                transition duration-500">
+                <div className=" h-screen w-1/2 bg-white z-30 absolute left-0 top-0
+                transform transition-all duration-300">
                     <menu>
                     <ul  className="justify-center items-center">
                 <Link to={"/" }  className={'p-4 text-black cursor-pointer hover:border-black hover:border-b-2 border__black flex'}>
