@@ -67,7 +67,7 @@ const Contact = () => {
                                 <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600" type="email" placeholder="Ingrese su correo"/>
                                 <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600"type= "text" placeholder="Asunto"s/>
                                 <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600"type= "text" placeholder="Mensaje"/>
-                                <button className="rounded py-2.5  px-10 mt-10 border-none text-sm bg-blue-900 font-semibold cursor-pointer text-white outline-none hover:bg-blue-500" type="button">
+                                <button className="rounded py-2.5  px-10 mt-10 border-none text-sm bg-blue-900 font-semibold cursor-pointer text-white outline-none hover:bg-blue-500 transform transition-all hover:-translate-y-1 hover:scale-110duration-300  "  type="button">
                                     Enviar
                                 </button>
                             </form>

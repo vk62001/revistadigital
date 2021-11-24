@@ -7,45 +7,90 @@ import NavBar from '../../components/Navbar';
 
 
 const Login = () => {
-    
+      const [session, setSession] = useState(true);
+      const [register, setRegister] = useState(false);
+      const [password, setPassword] = useState(false);
+
+      const recoveryPassword = () => {
+        setSession(password?true:false);
+        setPassword(!password)
+      };
+      const enterRegister = () =>{
+        setSession(!session);
+        setRegister(!register);
+      };
+      const enterSession = () => {};
+
+
     return (
-      <div>
+      <div className="login">
         
-        <img className="absolute w-full h-full" src={logo}/>
-        <NavBar />
-        <div className="font-serif">
-          <div className="w-full max-w-4xl m-auto relative mt-32" >
-            <div className="w-full py-2.5 px-5 flex justify-center backdrop-filter-blur bg-blue-600">
-              <div className="my-24 mx-10 mt-7 text-white transition delay-500">
-                <h3 className="mt-7 font-normal text-base">¿Ya tienes una cuenta?</h3>
-                <p className="mt-7 text-base font-light">Inicia sesión para entrar a la página</p>
-                <button className="mt-7 py-2.5 px-10 border-2 border-white text-sm bg-transparent font-semibold cursor-pointer bg-blue outline-none transition delay-300 hover:bg-white hover:text-blue-500">Iniciar sesión</button>
-              </div>
-               <div className="my-24 mx-10 mt-7 text-white transition delay-500">
-                  <h3 className="mt-7 font-normal text-base">¿Aun no tienes una cuenta?</h3>
-                  <p className="mt-7 text-base font-light">Regístrate para que puedas iniciar sesión</p>
-                  <button className="mt-7 py-2.5 px-10 border-2 border-white text-sm bg-transparent font-semibold cursor-pointer outline-none transition delay-300 hover:bg-white hover:text-blue-500">Regístrarse</button>
-                </div>
-            </div>
+        <NavBar 
+          white={true}
+        />
+        <div className="container-form flex w-full h-screen">
+          <div className="
+                  w-1/2
+                  phone:w-0
+                "
+          >
+            
           </div>
+          <div className="
+            tablet:w-1/2
+            phone:w-11/12 phone:m-auto
+            "
+          >
+            {session &&
+              <form className="py-10 px-5 bg-white  rounded-xl ">
+                <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Iniciar Sesión</h2>
+                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Correo Electronico"/>
+                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Contraseña"/>
+                <p 
+                  className="mt-9"
+                  onClick={recoveryPassword}
+                >Olvidé mi contraseña</p>
+                <button 
+                  className="w-full py-2.5 px-10 mt-1 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded"
+                  onClick={enterSession}
+                >Entrar</button>
+                <button 
+                  className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded"
+                  onClick={enterRegister}  
+                >Registrarse</button>
+              </form>
+            }
+            {register &&
+                <form className="py-10 px-5 bg-white  rounded-xl ">
+                  <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Registrar</h2>
+                  <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Correo Electronico"/>
+                  <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Contraseña"/>
+                  <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Repetir contraseña"/>
+                  <button 
+                    className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded"
 
-        <div className="flex items-center w-full max-w-sm relative -top-40 left-64 opacity-100 block">
-          <form className="w-full py-10 px-5 bg-white absolute rounded-3xl">
-            <h2 className="text-3xl text-center mb-2 -mt-5 text-blue-600 font-black">Inciar Sesión</h2>
-            <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Correo Electronico"/>
-            <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Contraseña"/>
-            <button className="py-2.5 px-10 mt-10 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none">Entrar</button>
-          </form>
+                  >Registrarse</button>
+                  <button 
+                    className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded"
+                    onClick = {enterRegister}
+                  >Iniciar sesión</button>
+              </form>
+            }
+            {password &&
+                <form className="py-10 px-5 bg-white  rounded-xl ">
+                <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Recuperar contraseña</h2>
+                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Correo Electronico"/>
+                <button 
+                  className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded"
 
-          <form className="w-full py-10 px-5 bg-white absolute rounded-3xl hidden">
-            <h2 className="text-3xl text-center mb-2 -mt-5 text-blue-600 font-black">Regístrarse</h2>
-            <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Nombre completo"/>
-            <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Correo Electronico"/>
-            <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Usuario"/>
-            <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Contraseña"/>
-            <button className="py-2.5 px-10 mt-10 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none">Regístrarse</button>
-          </form>
-        </div>
+                >Enviar</button>
+                <button 
+                  className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded"
+                  onClick = {recoveryPassword}
+                >Iniciar sesión</button>
+                </form>
+            }
+          </div>
         </div>
       </div>
    

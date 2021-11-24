@@ -26,7 +26,11 @@ const NavBar = props => {
                     </div>
                
             </div>
-            <div id="menu" className=" desktop:w-1/2 tablet:w-full tablet:block phone:hidden hidden ">
+            <div id="menu" className=" 
+                phone:hidden hidden 
+                tablet:w-full tablet:block tablet:z-10
+                desktop:w-1/2 
+            ">
                 <ul  className="flex justify-center items-center">
                 <Link to={"/" }  className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
                         <i className="fas fa-home"></i>
