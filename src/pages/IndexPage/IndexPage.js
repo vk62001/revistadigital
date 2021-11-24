@@ -15,11 +15,11 @@ const IndexPage = () => {
                     <NavBar 
                         white={true}
                     />
-                    <h2 className="font-sans text-7xl font-bold uppercase fixed left-0 right-0 m-auto text-center text-white mt-28">Revista <br /> Digital<br/></h2>
+                    <h2 className=" font-sans text-7xl font-bold uppercase fixed left-0 right-0 m-auto text-center text-white mt-28">Revista <br /> Digital<br/></h2>
                     <div>
                     <div className="">
                      <div className="absolute top-0 right-0 mt-64 mr-20">
-                      <img className="w-96 animate-bounce 
+                      <img className="w-96
                                         phone:block phone:w-1/3 phone:fixed phone:left-1/3 phone:bottom-2 
                                         tablet:block tablet:w-1/4 tablet:fixed tablet:left-3/4 tablet:bottom-40 
                                         laptop:block laptop:w-1/4 laptop:left-auto laptop:right-8 laptop:bottom-0
@@ -44,14 +44,14 @@ const IndexPage = () => {
                                         laptop:w-5/6 desktop:w-11/12">
                                             
                                 <Link  to="/formulario"
-                                    className="phone:py-2 rounded-full bg-white phone:text-2xl text-center
-                                    bg-white p-3 hover:bg-blue-500"
+                                    className=" phone:py-2 rounded-full bg-white phone:text-2xl text-center
+                                    bg-white p-3 hover:bg-blue-500 hover:text-white"
                                 >
                                     Registrarse
                                 </Link>
                                 <Link to="/about"
                                     className="phone:py-2 rounded-full bg-white phone:text-2xl text-center
-                                    bg-white p-4 hover:bg-blue-500"
+                                    bg-white p-4 hover:bg-blue-500 hover:text-white"
                                 >
                                     Ver Más
                                 </Link>
