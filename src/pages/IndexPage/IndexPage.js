@@ -11,7 +11,7 @@ const IndexPage = () => {
         <div>                       
                 
                 <div className="fixed h-full w-full">
-                <img className="absolute w-2/3 h-2/3 mt-24 ml-32" src={logotecnm}/>
+                <img className="absolute w-2/3 h-2/3 mt-24 ml-32 opacity-50" src={logotecnm}/>
                 <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-gray-200">
                     <NavBar 
                         white={false}
