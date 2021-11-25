@@ -11,11 +11,11 @@ const IndexPage = () => {
         <div>                       
                 <img className="logotec phone:hidden laptop:block" src={LogoTect} alt="logotec" />
                 <div className="fixed h-full w-full">
-                <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-blue-900">
+                <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-white">
                     <NavBar 
-                        white={true}
+                        white={false}
                     />
-                    <h2 className=" font-sans text-7xl font-bold uppercase fixed left-0 right-0 m-auto text-center text-white mt-28">Revista <br /> Digital<br/></h2>
+                    <h2 className=" font-sans text-7xl font-bold uppercase fixed left-0 right-0 m-auto text-center text-blue-900 mt-28">Revista <br /> Digital<br/></h2>
                     <div>
                     <div className="">
                      <div className="absolute top-0 right-0 mt-64 mr-20">
@@ -30,11 +30,11 @@ const IndexPage = () => {
                     <div>
                         <div className="absolute ml-24 phone:ml-4 phone:my-2 
                                               tablet:ml-10 tablet:mr-10 tablet:my-28">
-                        <h2 className=" text center text-white font-sans text-5xl">
+                        <h2 className=" text center text-blue-900 font-sans text-5xl">
                             Bienvenido
                         </h2>
                        
-                        <p className="text-white mt-8 text-base">
+                        <p className="text-gray-700 mt-8 text-base">
                             El cambio del aprendizaje de manera presencial a la era digital ha generado y <br />propiciado un grado de responsabilidad y compromiso de todos...
                         </p>
                        
@@ -44,13 +44,13 @@ const IndexPage = () => {
                                         laptop:w-5/6 desktop:w-11/12">
                                             
                                 <Link  to="/formulario"
-                                    className=" phone:py-2 rounded-full bg-white phone:text-2xl text-center
+                                    className=" phone:py-2 rounded-full bg-blue-900 text-white phone:text-2xl text-center
                                     bg-white p-3 hover:bg-blue-500 hover:text-white"
                                 >
                                     Registrarse
                                 </Link>
                                 <Link to="/about"
-                                    className="phone:py-2 rounded-full bg-white phone:text-2xl text-center
+                                    className="phone:py-2 rounded-full bg-blue-900 text-white phone:text-2xl text-center
                                     bg-white p-4 hover:bg-blue-500 hover:text-white"
                                 >
                                     Ver Más

@@ -18,7 +18,7 @@ const Comments = () => {
                  </div>
         
              
-        <div className="absolute h-3/5 inset-y-7 left-48 bg-gray-200 p-16 rounded-3xl justify-center shadow-2xl
+        <div className="absolute h-3/5 inset-y-7 left-48 bg-gray-100 p-16 rounded-xl justify-center shadow-2xl
         w-1/2
         laptop:block laptop:w-1/2 laptop:left-28 laptop:my-8
         desktop:block desktop:w-2/5 desktop:right-16 desktop:my-8
