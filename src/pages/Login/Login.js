@@ -37,8 +37,10 @@ const Login = () => {
             
           </div>
           <div className="
-            tablet:w-1/2
             phone:w-11/12 phone:m-auto
+            tablet:w-1/2  
+            laptop:w-1/3 laptop:mr-16
+            desktop:w-1/4
             "
           >
             {session &&
