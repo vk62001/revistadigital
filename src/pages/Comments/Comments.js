@@ -46,7 +46,8 @@ const Comments = () => {
         </div>
 
         <button className="py-2.5  px-10 mt-10 border-none text-sm bg-blue-900 font-semibold
-         cursor-pointer text-white outline-none hover:bg-blue-500 w-full">Enviar</button>
+         cursor-pointer text-white outline-none hover:bg-blue-500 w-full
+         transform transition-all hover:-translate-y-1 hover:scale-110duration-300">Enviar</button>
 
 
         </form>

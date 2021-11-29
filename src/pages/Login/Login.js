@@ -53,7 +53,8 @@ const Login = () => {
                   onClick={recoveryPassword}
                 >Olvidé mi contraseña</p>
                 <button 
-                  className="w-full py-2.5 px-10 mt-1 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded"
+                  className="w-full py-2.5 px-10 mt-1 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
+                  transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
                   onClick={enterSession}
                 >Entrar</button>
                 <button 
@@ -69,7 +70,8 @@ const Login = () => {
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Contraseña"/>
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Repetir contraseña"/>
                   <button 
-                    className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded"
+                    className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
+                    transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
 
                   >Registrarse</button>
                   <button 
