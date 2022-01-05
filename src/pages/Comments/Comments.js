@@ -42,7 +42,7 @@ const Comments = () => {
         </div>
 
         <div>
-          <input className="w-full h-24 placeholder-gray-500 border-2 border-gray-100
+          <input className="w-full h-24 pb-16 placeholder-gray-500 border-2 border-gray-100
           rounded outline-none focus:ring-2 focus:ring-blue-600 p-2" placeholder="Comentario"/>
         </div>
 
