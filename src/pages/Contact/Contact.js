@@ -59,15 +59,16 @@ const Contact = () => {
                             <form className="
                                     phone:py-7 phone:px-5 phone:bg-gray-100 phone:rounded-xl
                                     tablet:w-full tablet:py-20 tablet:px-5 tablet:bg-gray-100 tablet:rounded-xl tablet:shadow-2xl
-                                    laptop:w-full laptop:py-20 laptpop:px-5 laptop:bg-gray-100 laptop:rounded-xl laptop:shadow-2xl
-                                    desktop:w-8/12 desktop:py-20 laptpop:px-5 desktop:bg-gray-100 desktop:rounded-xl desktop:shadow-2xl desktop:float-left
+                                    laptop:w-full laptop:py-20 laptop:px-5 laptop:bg-gray-100 laptop:rounded-xl laptop:shadow-2xl
+                                    desktop:w-8/12 desktop:py-8 desktop:px-5 desktop:bg-gray-100 desktop:rounded-xl desktop:shadow-2xl desktop:float-left
                                      ">
-                                <h2 className="text-3xl text-center mb-5 text-blue-900 font-sans font-bold uppercase">Contacto</h2>
+                                <h2 className="text-3xl text-center mb- text-blue-900 font-sans font-bold uppercase">Contacto</h2>
                                 <input className="w-full rounded mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600" type="text" placeholder="Ingrese su nombre"/>
                                 <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600" type="email" placeholder="Ingrese su correo"/>
                                 <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600"type= "text" placeholder="Asunto"s/>
-                                <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600"type= "text" placeholder="Mensaje"/>
-                                <button className="rounded py-2.5  px-10 mt-10 border-none text-sm bg-blue-900 font-semibold cursor-pointer text-white outline-none hover:bg-blue-500 transform transition-all hover:-translate-y-1 hover:scale-110duration-300  "  type="button">
+                                <input className="w-full h-24 mt-5 p-2.5 pb-16 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600"type= "text" placeholder="Mensaje" maxLength={500}/>
+                                
+                                <button className="w-full rounded py-2.5  px-10 mt-10 border-none text-sm bg-blue-900 font-semibold cursor-pointer text-white outline-none hover:bg-blue-500 transform transition-all hover:-translate-y-1 hover:scale-110duration-300  "  type="button">
                                     Enviar
                                 </button>
                             </form>

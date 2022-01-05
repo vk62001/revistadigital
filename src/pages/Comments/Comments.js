@@ -18,7 +18,8 @@ const Comments = () => {
                  </div>
         
              
-        <div className="absolute h-3/5 inset-y-7 left-48 bg-gray-100 p-16 rounded-xl justify-center shadow-2xl
+        <div className="absolute h-3/5 inset-y-7 left-48 
+        bg-gray-100 p-16 rounded-xl justify-center shadow-2xl
         w-1/2
         laptop:block laptop:w-1/2 laptop:left-28 laptop:my-8
         desktop:block desktop:w-2/5 desktop:right-16 desktop:my-8
@@ -41,7 +42,7 @@ const Comments = () => {
         </div>
 
         <div>
-          <input className="w-full h-28 placeholder-gray-500 border-2 border-gray-100
+          <input className="w-full h-24 placeholder-gray-500 border-2 border-gray-100
           rounded outline-none focus:ring-2 focus:ring-blue-600 p-2" placeholder="Comentario"/>
         </div>
 
