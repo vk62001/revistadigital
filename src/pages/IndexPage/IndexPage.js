@@ -13,9 +13,9 @@ const IndexPage = () => {
                 <div className="fixed h-full w-full">
                 <img className="absolute w-2/3 h-2/3 mt-24 ml-32 opacity-50
                 phone:block phone:w-3/4 phone:h-1/5 phone:mt-80 phone:ml-10 phone:opacity-50
-                tablet:block tablet:w-3/4 tablet:h-1/5 tablet:mt-72 tablet:ml-0 tablet:opacity-50
-                laptop:block laptop:w-full laptop:h-2/5 laptop:mt-72 laptop:ml-0 laptop:opacity-50 
-                desktop:block desktop:w-2/3 desktop:h-2/3 desktop:mt-24 desktop:ml-0 desktop:opacity-50" src={logotecnm}/>
+                tablet:block tablet:w-3/4 tablet:h-2/5 tablet:mt-36 tablet:ml-20 tablet:opacity-50
+                laptop:block laptop:w-3/4 laptop:h-2/5 laptop:mt-36 laptop:ml-20 laptop:opacity-50 
+                desktop:block desktop:w-2/3 desktop:h-2/3 desktop:mt-24 desktop:ml-36 desktop:opacity-50" src={logotecnm}/>
                 <div className="h-full w-full grid grid-rows-6 grid-flow-col bg-gray-200">
                     <NavBar 
                         white={false}
