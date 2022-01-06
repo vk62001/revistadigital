@@ -38,9 +38,9 @@ const Login = () => {
           </div>
           <div className="
             phone:w-11/12 phone:m-auto
-            tablet:w-1/2  
+            tablet:w-2/5  
             laptop:w-1/3 laptop:mr-16
-            desktop:w-1/4 desktop:mr-40            "
+            desktop:w-1/4 desktop:mr-44  desktop:mt-16          "
           >
             {session &&
               <form className="py-8 px-5 pb-4  bg-white  rounded-xl ">
