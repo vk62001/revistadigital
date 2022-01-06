@@ -50,13 +50,15 @@ const IndexPage = () => {
                                             
                                 <Link  to="/formulario"
                                     className=" phone:py-2 rounded-full bg-blue-900 text-white phone:text-2xl text-center
-                                    bg-white p-3 hover:bg-blue-500 hover:text-white"
+                                    bg-white p-3 hover:bg-blue-500 hover:text-white
+                                    transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
                                 >
                                     Registrarse
                                 </Link>
                                 <Link to="/about"
                                     className="phone:py-2 rounded-full bg-blue-900 text-white phone:text-2xl text-center
-                                    bg-white p-4 hover:bg-blue-500 hover:text-white"
+                                    bg-white p-4 hover:bg-blue-500 hover:text-white
+                                    transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
                                 >
                                     Ver Más
                                 </Link>

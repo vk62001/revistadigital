@@ -43,12 +43,13 @@ const Login = () => {
             desktop:w-1/4 desktop:mr-40            "
           >
             {session &&
-              <form className="py-8 px-5  bg-white  rounded-xl ">
+              <form className="py-8 px-5 pb-4  bg-white  rounded-xl ">
                 <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Iniciar Sesión</h2>
                 <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Correo Electronico"/>
                 <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Contraseña"/>
                 <p 
-                  className="mt-9  hover:text-blue-600 cursor-pointer"
+                  className="mt-9  hover:text-blue-600 cursor-pointer
+                  transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
                   onClick={recoveryPassword}
                 >Olvidé mi contraseña</p>
                 <button 
@@ -64,8 +65,8 @@ const Login = () => {
               </form>
             }
             {register &&
-                <form className="py-10 px-5 bg-white  rounded-xl ">
-                  <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Registrar</h2>
+                <form className="py-8 px-5 pb-5 bg-white  rounded-xl ">
+                  <h2 className="w-full text-xl text-center mb-2 -mt-6 text-blue-600 font-black">Registrar</h2>
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Correo Electronico"/>
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Contraseña"/>
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Repetir contraseña"/>
