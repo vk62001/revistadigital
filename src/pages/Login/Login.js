@@ -40,11 +40,10 @@ const Login = () => {
             phone:w-11/12 phone:m-auto
             tablet:w-1/2  
             laptop:w-1/3 laptop:mr-16
-            desktop:w-1/4
-            "
+            desktop:w-1/4 desktop:mr-40            "
           >
             {session &&
-              <form className="py-9 px-5  bg-white  rounded-xl ">
+              <form className="py-8 px-5  bg-white  rounded-xl ">
                 <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Iniciar Sesión</h2>
                 <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Correo Electronico"/>
                 <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Contraseña"/>
@@ -71,12 +70,13 @@ const Login = () => {
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Contraseña"/>
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Repetir contraseña"/>
                   <button 
-                    className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
+                    className="w-full py-2.5 px-10 mt-5 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
                     transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
 
                   >Registrarse</button>
                   <button 
-                    className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded"
+                    className="w-full py-2.5 px-10 mt-5 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded
+                    transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
                     onClick = {enterRegister}
                   >Iniciar sesión</button>
               </form>
@@ -86,11 +86,13 @@ const Login = () => {
                 <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Recuperar contraseña</h2>
                 <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Correo Electronico"/>
                 <button 
-                  className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded"
+                  className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
+                  transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
 
                 >Enviar</button>
                 <button 
-                  className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded"
+                  className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded
+                  transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
                   onClick = {recoveryPassword}
                 >Iniciar sesión</button>
                 </form>
