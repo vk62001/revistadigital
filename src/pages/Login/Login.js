@@ -49,7 +49,7 @@ const Login = () => {
                 <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" placeholder="Correo Electronico"/>
                 <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" placeholder="Contraseña"/>
                 <p 
-                  className="mt-9 cursor-pointer"
+                  className="mt-9  hover:text-blue-600 cursor-pointer"
                   onClick={recoveryPassword}
                 >Olvidé mi contraseña</p>
                 <button 
