@@ -23,7 +23,7 @@ const Login = () => {
 
 
     return (
-      <div className="login">
+      <div className="login fixed">
         
         <NavBar 
           white={true}
@@ -40,7 +40,7 @@ const Login = () => {
             phone:w-11/12 phone:m-auto
             tablet:w-2/5  
             laptop:w-1/3 laptop:mr-16
-            desktop:w-1/4 desktop:mr-44  desktop:mt-16          "
+            desktop:w-1/4 desktop:mr-44 desktop:mt-10"
           >
             {session &&
               <form className="py-8 px-5 pb-4  bg-white  rounded-xl ">
