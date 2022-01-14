@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios';
 import NavBar from '../../components/Navbar';
 
 
 
 const Login = () => {
+
       const [session, setSession] = useState(true);
       const [register, setRegister] = useState(false);
       const [password, setPassword] = useState(false);
@@ -19,7 +20,13 @@ const Login = () => {
         setSession(!session);
         setRegister(!register);
       };
-      const enterSession = () => {};
+      const enterSession = () => {
+        axios.post('/test')
+        .then(e=>{
+          console.log(e);
+        })
+        .catch(error=>{console.log(error)});
+      };
 
 
     return (
