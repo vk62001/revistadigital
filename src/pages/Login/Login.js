@@ -20,7 +20,8 @@ const Login = () => {
         setSession(!session);
         setRegister(!register);
       };
-      const enterSession = () => {
+      const enterSession = (e) => {
+        e.preventDefault();
         axios.post('/test')
         .then(e=>{
           console.log(e);
@@ -62,7 +63,7 @@ const Login = () => {
                 <button 
                   className="w-full py-2.5 px-10 mt-1 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
                   transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
-                  onClick={enterSession}
+                  onClick={e=>enterSession(e)}
                 >Entrar</button>
                 <button 
                   className="w-full py-2.5 px-8 mt-8 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded
