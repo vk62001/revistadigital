@@ -82,9 +82,13 @@ const Login = () => {
       };
     
 
-     async function signup(){
-
-       let result = await axios.post("http://localhost:8000/api/register",user);
+     async function signup(e){
+      e.preventDefault(e);
+      await axios.post("http://localhost:8000/api/register",user)
+       .then(res=>{
+            alert("usuario registrado")
+       })
+       .catch(err=>{alert("favor de revisar los datos")});
        setErrors('El Usuario se ha Registrado con Exito')
        setUser({name:"",email:"",password:""})///Limpia los campos
 
@@ -139,7 +143,7 @@ const Login = () => {
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" name='email' value={email} onChange={e => onInputChange(e)}placeholder="Correo Electronico"/>
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name='password'value={password} onChange={e => onInputChange(e)} placeholder="Contraseña"/>
                  
-                  <button type='submit' onClick={signup} 
+                  <button type='submit' onClick={e => signup(e)} 
                     className="w-full py-2.5 px-10 mt-5 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
                     transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
 
