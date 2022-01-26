@@ -3,6 +3,7 @@ import './Login.css';
 import { Link, NavLink, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import NavBar from '../../components/Navbar';
+import { Alert } from 'bootstrap';
 
 
 
@@ -86,14 +87,21 @@ const Login = () => {
       e.preventDefault(e);
       await axios.post("http://localhost:8000/api/register",user)
        .then(res=>{
-            alert("usuario registrado")
+            console.log(res.data.data.email);
+            if(res.data.data.email){
+              alert("El correo ya existe");
+            }else{
+              alert("reenviando al dashboard")
+            }
        })
        .catch(err=>{alert("favor de revisar los datos")});
        setErrors('El Usuario se ha Registrado con Exito')
        setUser({name:"",email:"",password:""})///Limpia los campos
 
      }
-
+     let newPassword = user.password;
+     
+     
     return (
       <div className="login fixed">
         
@@ -123,6 +131,7 @@ const Login = () => {
                   className="mt-9  hover:text-blue-600 cursor-pointer
                   transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
                   onClick={recoveryPassword}
+                  
                 >Olvidé mi contraseña</p>
                 <button 
                   className="w-full py-2.5 px-10 mt-1 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
@@ -144,10 +153,10 @@ const Login = () => {
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name='password'value={password} onChange={e => onInputChange(e)} placeholder="Contraseña"/>
                  
                   <button type='submit' onClick={e => signup(e)} 
-                    className="w-full py-2.5 px-10 mt-5 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
-                    transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
-
-                  >Registrarse</button>
+                    className={(!newPassword.length<7?'bg-gray-400':'bg-blue-600')+` w-full py-2.5 px-10 mt-5 border-none text-sm cursor-pointer text-white outline-none rounded
+                    transform transition-all hover:-translate-y-1 hover:scale-110duration-300`}
+                    disabled = {(!newPassword.length<8)?true : false}
+                  >Registrarse {newPassword.length}</button>
                   <button 
                     className="w-full py-2.5 px-10 mt-5 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded
                     transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
@@ -162,7 +171,7 @@ const Login = () => {
                 <button 
                   className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
                   transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
-
+                  
                 >Enviar</button>
                 <button 
                   className="w-full py-2.5 px-10 mt-10 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded
