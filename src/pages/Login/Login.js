@@ -153,10 +153,10 @@ const Login = () => {
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name='password'value={password} onChange={e => onInputChange(e)} placeholder="Contraseña"/>
                  
                   <button type='submit' onClick={e => signup(e)} 
-                    className={(!newPassword.length<7?'bg-gray-400':'bg-blue-600')+` w-full py-2.5 px-10 mt-5 border-none text-sm cursor-pointer text-white outline-none rounded
+                    className={(newPassword.length<8?'bg-gray-400':'bg-blue-600')+` w-full py-2.5 px-10 mt-5 border-none text-sm cursor-pointer text-white outline-none rounded
                     transform transition-all hover:-translate-y-1 hover:scale-110duration-300`}
-                    disabled = {(!newPassword.length<8)?true : false}
-                  >Registrarse {newPassword.length}</button>
+                    disabled = {newPassword.length<8?true : false}
+                  >Registrarse </button>
                   <button 
                     className="w-full py-2.5 px-10 mt-5 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded
                     transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
