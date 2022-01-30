@@ -31,42 +31,42 @@ const Login = () => {
       };
        
       //Login
-     /*  const [msg,setMsg] = useState('');
+     const [msg,setMsg] = useState('');
 
       const [username, setUsername] = useState('');
       const [pass, setPass] = useState('');
 
 
-      const [user,setUser] = useState({
+      const [user1,setUser1] = useState({
         email:"",
         password:""
         });
 
         let history = useHistory();
 
-        const {email,password} = user;
-        const onInputChange = e => {
-          setUser({...user,[e.target.name]: e.target.value});
+        const {email1,password1} = user1;
+        const onInputChange1 = e => {
+          setUser({...user1,[e.target.name]: e.target.value});
         }
 
         const signIn = () =>{
         
           const users = { username };
 
-          if(user.email === ''){
+          if(user1.email === ''){
             alert('Escribe el correo por favor')
           }
-          else if(user.password === ''){
-            alert('Escribe tu contraseña por favor')
+          else if(user1.password === ''){
+            alert('Por favor rellena todos los campos')
           }
-          axios.post("http://localhost:8000/api/login", user)
+          axios.post("http://localhost:8000/api/login", user1)
           .then(response => {
           setMsg(response.data);
           localStorage.setItem("users",response.data);
           history.push("/");
           });
 
-        }*/
+        }
       
       //Registro  
       const [errors,setErrors]= useState('');
@@ -91,16 +91,16 @@ const Login = () => {
             if(res.data.data.email){
               alert("El correo ya existe");
             }else{
-              alert("reenviando al dashboard")
+              alert("El usuario se ha registado con Exito")
             }
        })
-       .catch(err=>{alert("favor de revisar los datos")});
+       .catch(err=>{alert("Porfavor Rellena todos los campos")});
        setErrors('El Usuario se ha Registrado con Exito')
        setUser({name:"",email:"",password:""})///Limpia los campos
 
      }
      let newPassword = user.password;
-     
+  
      
     return (
       <div className="login fixed">
@@ -125,18 +125,18 @@ const Login = () => {
             {session &&
               <form className="py-8 px-5 pb-4  bg-white  rounded-xl ">
                 <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Iniciar Sesión</h2>
-                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" name="email" value={email} onChange={e => onInputChange(e)} placeholder="Correo Electronico"/>
-                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name="password" value={password} onChange={e => onInputChange(e)} placeholder="Contraseña"/>
+                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" name="email1" value={email1} onChange={e => onInputChange1(e)} placeholder="Correo Electronico"/>
+                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name="password" value={password1} onChange={e => onInputChange1(e)} placeholder="Contraseña"/>
                 <p 
                   className="mt-9  hover:text-blue-600 cursor-pointer
                   transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
                   onClick={recoveryPassword}
                   
                 >Olvidé mi contraseña</p>
-                <button 
-                  className="w-full py-2.5 px-10 mt-1 border-none text-sm bg-blue-600 cursor-pointer text-white outline-none rounded
-                  transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
-                  onClick={enterSession}
+                <button type="submit" onClick={signIn} 
+                  className={(newPassword.length<8?'bg-gray-400':'bg-blue-600')+` w-full py-2.5 px-10 mt-5 border-none text-sm cursor-pointer text-white outline-none rounded
+                  transform transition-all hover:-translate-y-1 hover:scale-110duration-300`}
+                  disabled = {newPassword.length<8?true : false}
                 >Entrar</button>
                 <button 
                   className="w-full py-2.5 px-8 mt-8 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded
