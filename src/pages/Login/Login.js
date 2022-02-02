@@ -45,11 +45,10 @@ const Login = () => {
         .catch(error=>{console.log(error)});
       };
        
+         const handleInputChange = (event) => {
+           console.log(event.target.value)
+         }
 
-        const {email1,password1} = user1;
-        const onInputChange1 = e => {
-          setUser1({...user1,[e.target.name]: e.target.value});
-        }
 
         const signIn = e =>{
           e.preventDefault();
@@ -120,8 +119,8 @@ const Login = () => {
             {session &&
               <form className="py-8 px-5 pb-4  bg-white  rounded-xl ">
                 <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Iniciar Sesión</h2>
-                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" name="email1" value={email1} onChange={e => onInputChange1(e)} placeholder="Correo Electronico"/>
-                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name="password1" value={password1} onChange={e => onInputChange1(e)} placeholder="Contraseña"/>
+                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" name="email" onChange={handleInputChange} placeholder="Correo Electronico"/>
+                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name="password" onChange={e => handleInputChange(e)} placeholder="Contraseña"/>
                 <p 
                   className="mt-9  hover:text-blue-600 cursor-pointer
                   transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
@@ -145,7 +144,7 @@ const Login = () => {
                 <form className="py-8 px-5 pb-5 bg-white  rounded-xl ">
                   <h2 className="w-full text-xl text-center mb-2 -mt-6 text-blue-600 font-black">Registrar</h2>
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" name='name' value={name} onChange={e => onInputChange(e)} placeholder="Nombre"/>
-                  <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" name='email' value={email} onChange={e => onInputChange(e)}placeholder="Correo Electronico"/>
+                  <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="email" name='email' value={email} onChange={e => onInputChange(e)}placeholder="Correo Electronico"/>
                   <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name='password'value={password} onChange={e => onInputChange(e)} placeholder="Contraseña"/>
                  
                   <button type='submit' onClick={e => newRegister(e)} 
