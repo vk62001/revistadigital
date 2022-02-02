@@ -23,10 +23,8 @@ const Login = () => {
             password:""     
          
       });
-      const [user1,setUser1] = useState({
-        email1:"",
-        password1:""
-      });
+      const [mailLogin, setMailLogin] = useState('');
+      const [passLogin,setPassLogin] = useState('');
       
       const recoveryPassword = () => {
         setSession(password2?true:false);
@@ -45,20 +43,30 @@ const Login = () => {
         .catch(error=>{console.log(error)});
       };
        
-         const handleInputChange = (event) => {
-           console.log(event.target.value)
+         const handleInputChange = (e) => {
+           console.log(e.target.name,'handleInput')
+           if(e.target.name === 'email1'){
+              setMailLogin({email: e.target.value})
+           }else{
+              setPassLogin({password: e.target.value});
+           }
          }
 
 
         const signIn = e =>{
           e.preventDefault();
-          if(user1.email === ''){
-            alert('Escribe el correo por favor')
+          // if(user1.email === ''){
+          //   alert('Escribe el correo por favor')
+          // }
+          // else if(user1.password === ''){
+          //   alert('Por favor rellena todos los campos')
+          // }
+          let objLogin = {
+            email : mailLogin,
+            password : passLogin
           }
-          else if(user1.password === ''){
-            alert('Por favor rellena todos los campos')
-          }
-          axios.post("http://localhost:8000/api/login", user1)
+
+          axios.post("http://localhost:8000/api/login", objLogin)
           .then(response => {
             console.log(response);
           // setMsg(response.data);
@@ -94,8 +102,7 @@ const Login = () => {
 
      }
      let newPassword = user.password;
-     let newPassword1 = user1.password1;
-  
+
      
     return (
       <div className="login fixed">
@@ -119,8 +126,8 @@ const Login = () => {
             {session &&
               <form className="py-8 px-5 pb-4  bg-white  rounded-xl ">
                 <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Iniciar Sesión</h2>
-                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" name="email" onChange={handleInputChange} placeholder="Correo Electronico"/>
-                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name="password" onChange={e => handleInputChange(e)} placeholder="Contraseña"/>
+                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" name="email1" onChange={handleInputChange} placeholder="Correo Electronico"/>
+                <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name="password1" onChange={e => handleInputChange(e)} placeholder="Contraseña"/>
                 <p 
                   className="mt-9  hover:text-blue-600 cursor-pointer
                   transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
@@ -128,9 +135,9 @@ const Login = () => {
                   
                 >Olvidé mi contraseña</p>
                 <button type="submit" onClick={e => signIn(e)} 
-                  className={(newPassword1.length<8?'bg-gray-400':'bg-blue-600')+` w-full py-2.5 px-10 mt-5 border-none text-sm cursor-pointer text-white outline-none rounded
+                  className={('bg-blue-600')+` w-full py-2.5 px-10 mt-5 border-none text-sm cursor-pointer text-white outline-none rounded
                   transform transition-all hover:-translate-y-1 hover:scale-110duration-300`}
-                  disabled = {newPassword1.length<8?true : false}
+                  // disabled = {newPassword1.length<8?true : false}
                 >Entrar</button>
                 <button 
                   className="w-full py-2.5 px-8 mt-8 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded
