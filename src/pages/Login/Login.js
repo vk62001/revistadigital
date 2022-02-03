@@ -4,12 +4,13 @@ import { Link, NavLink, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import NavBar from '../../components/Navbar';
 import { Alert } from 'bootstrap';
+import swal from 'sweetalert2';
 
 
 
 const Login = () => {
 
-      let history = useHistory();
+      const history = useHistory;
       const [session, setSession] = useState(true);
       const [register, setRegister] = useState(false);
       const [password2, setPassword2] = useState(false);
@@ -63,16 +64,28 @@ const Login = () => {
           // }
           let objLogin = {
             email : mailLogin,
-            password : passLogin
+            password : passLogin,
+            
           }
-
+          
           axios.post("http://localhost:8000/api/login", objLogin)
           .then(response => {
-            console.log(response);
+            let data =response.data;
+            console.log(data);
+            
+            
+             
+              
+              
+            
+
+            
+            
           // setMsg(response.data);
           // localStorage.setItem("users",response.data);
           // history.push("/");
           });
+        
 
         }
       
