@@ -60,7 +60,7 @@ const Login = () => {
             
           }
           console.log(objLogin);
-          axios.post("http://localhost:8000/api/login", objLogin)
+          axios.post("http://localhost:8000/api/auth/login", objLogin)
           .then(res => {
             auth.login(res.data.user);
             history.push("/editions");
