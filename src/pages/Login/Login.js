@@ -60,11 +60,19 @@ const Login = () => {
             
           }
           console.log(objLogin);
-          axios.post("http://localhost:8000/api/login", objLogin)
+          axios.post("http://localhost:8000/api/auth/login", objLogin)
           .then(res => {
-            auth.login(res.data.user);
-            history.push("/editions");
-          });
+            console.log(res.data.success);
+            if(res.data.success){
+              auth.login(res.data.user);
+              history.push("/editions");
+            }else{
+              alert("error en usuario o contraseña")
+            }
+          })
+          .catch(err=>{
+            console.log(err);
+          })
         };
       
       //Registro  
