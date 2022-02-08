@@ -12,15 +12,15 @@ const Editions = () => {
                  />
            <div ClassName="Contenedor">
                <div ClassName="">
-               <h1 class="mb-1 font-sans text-3xl font-bold text-blue-900 text-center">Ediciones</h1>
-               <p class="mb-1 mt-10 font-sans text-4x2 font-bold text-blue-600 text-center">#1 SEP-FEB 2022</p>
+               <h1 className="mb-1 font-sans text-3xl font-bold text-blue-900 text-center">Ediciones</h1>
+               <p className="mb-1 mt-10 font-sans text-4x2 font-bold text-blue-600 text-center">#1 SEP-FEB 2022</p>
                <p className=" font-sans mt-4 text-center text-gray-600 text-2xl ">
                 
                  La digitalizacion <br/> 
                   en la educacion
                 </p>
 
-                <p class=" text-center text-green-500 font-semibold">TECCOMITANCILLO</p>
+                <p className=" text-center text-green-500 font-semibold">TECCOMITANCILLO</p>
                 <p className=" mt-6 text-center text-gray-500 ">
                 El cambio del aprendizaje de <br/> manera presencial a la era digital <br/> ha generado y propiciado un grado <br/> de responsabilidad y compromiso<br/> de todos...
              </p>

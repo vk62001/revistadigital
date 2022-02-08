@@ -1,8 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import BackDroop from '../UXComponents/BackDroop';
+import { AuthContext } from '../context/auth-context';
 
 const NavBar = props => {
+    const auth = useContext(AuthContext);
+    console.log(auth)
     const white = props.white
     const [menu, setMenu] = useState(false);
 
@@ -36,26 +39,29 @@ const NavBar = props => {
                         <i className="fas fa-home"></i>
                         <p className="m-0 text-xs ml-2">Inicio</p>
                 </Link>
-                <Link to={"/login" }  className={(white ? 'text-white':'text-blue-600') + ' p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
-                        <i className="fas fa-user"></i>
-                        <p className="m-0 text-xs ml-2"></p>
+                {!auth.user ?
+                    <Link to={"/login" }  className={(white ? 'text-white':'text-blue-600') + ' p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
+                            <i className="fas fa-user"></i>
+                            <p className="m-0 text-xs ml-2"></p>
+                    </Link>
+                :
+                    <Link to={"/editions"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
+                            <i className="fas fa-book-open"></i>
+                            <p className="m-0 text-xs ml-1">Ediciones</p>
+                    </Link>
+                }
+                <Link to={"/about"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
+                <i className="fas fa-bookmark"></i>
+                <p className="m-0 text-xs ml-1 ">Sobre la Revista</p>
                 </Link>
-                <Link to={"/editions"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
-                        <i className="fas fa-book-open"></i>
-                        <p className="m-0 text-xs ml-1">Ediciones</p>
-                     </Link>
-                     <Link to={"/about"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
-                        <i className="fas fa-bookmark"></i>
-                        <p className="m-0 text-xs ml-1 ">Sobre la Revista</p>
-                     </Link>
-                     <Link to={"/comments"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
-                        <i className="fas fa-comment-dots"></i>
-                        <p className="m-0 text-xs ml-1">Comentarios</p>
-                     </Link>
-                     <Link to={"/contact"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
-                        <i className="fas fa-address-card"></i>
-                        <p className="m-0 text-xs ml-1">Contacto</p>
-                     </Link>            
+                <Link to={"/comments"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
+                <i className="fas fa-comment-dots"></i>
+                <p className="m-0 text-xs ml-1">Comentarios</p>
+                </Link>
+                <Link to={"/contact"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
+                <i className="fas fa-address-card"></i>
+                <p className="m-0 text-xs ml-1">Contacto</p>
+                </Link>            
                 </ul>
             </div>
             {menu && 

@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css';
 import { Link, NavLink, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import NavBar from '../../components/Navbar';
 import { Alert } from 'bootstrap';
-
+import { AuthContext } from '../../context/auth-context';
 
 
 const Login = () => {
-
       let history = useHistory();
+      let auth = useContext(AuthContext);
       const [session, setSession] = useState(true);
       const [register, setRegister] = useState(false);
       const [password2, setPassword2] = useState(false);
@@ -44,37 +44,27 @@ const Login = () => {
       };
        
          const handleInputChange = (e) => {
-           console.log(e.target.name,'handleInput')
            if(e.target.name === 'email1'){
-              setMailLogin({email: e.target.value})
+              setMailLogin(e.target.value)
            }else{
-              setPassLogin({password: e.target.value});
+              setPassLogin(e.target.value);
            }
          }
 
 
         const signIn = e =>{
           e.preventDefault();
-          // if(user1.email === ''){
-          //   alert('Escribe el correo por favor')
-          // }
-          // else if(user1.password === ''){
-          //   alert('Por favor rellena todos los campos')
-          // }
           let objLogin = {
             email : mailLogin,
             password : passLogin
           }
-
+          console.log(objLogin);
           axios.post("http://localhost:8000/api/login", objLogin)
-          .then(response => {
-            console.log(response);
-          // setMsg(response.data);
-          // localStorage.setItem("users",response.data);
-          // history.push("/");
+          .then(res => {
+            auth.login(res.data.user);
+            history.push("/editions");
           });
-
-        }
+        };
       
       //Registro  
       
@@ -91,9 +81,10 @@ const Login = () => {
        .then(res=>{
             console.log(res.data.data.email);
             if(res.data.data.email){
-              alert("El correo ya existe");
+              alert("El correo ya existe, favor de revisar");
             }else{
-              alert("El usuario se ha registado con Exito")
+              alert("El usuario se ha registado con Exito");
+              //logear
             }
        })
        .catch(err=>{alert("Porfavor Rellena todos los campos")});

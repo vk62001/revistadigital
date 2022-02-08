@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect, useState, useCallback} from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {AuthContext} from './context/auth-context';
 import './App.css';
 import Contact from './pages/Contact/Contact';
 import Editions from './pages/Editions/Editions';
@@ -10,25 +11,73 @@ import About from './pages/AboutRevist/AboutRevist';
 import Comments from './pages/Comments/Comments';
 
 const  App = () => {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState(false);
+
+  const login = useCallback((user)=>{
+    setUser(user);
+    setIsLoggedIn(true);
+    localStorage.setItem('userData', JSON.stringify(user))
+  },[]);
+
+  const logout = useCallback(()=>{
+    setUser(null);
+    setIsLoggedIn(false);
+    localStorage.removeItem('userData');
+  },[]);
+
+
+  useEffect(() => {
+    const storedData = JSON.parse(localStorage.getItem('userData'));
+    if (storedData && storedData.token) {
+      login(storedData, storedData.token);
+    }
+  }, [login]);
+  
+
+
+  let routes;
+
+  if(user){
+    routes = (
+      <Switch>
+        <Route path="/" exact component = {IndexPage}  />
+        <Route path="/contact" exact component = {Contact}  />
+        <Route path="/editions" exact component = {Editions}  />
+        <Route path="/formulario" exact component = {Formulario}/>
+        <Route path="/about" exact component = {About}/>
+        <Route path="/comments" exact component = {Comments}/>
+      </Switch>
+    );
+  }else{
+    routes = (
+      <Switch>
+        <Route path="/" exact component = {IndexPage}  />
+        <Route path="/contact" exact component = {Contact}  />
+        <Route path="/login" exact component = {Login}  />
+        <Route path="/formulario" exact component = {Formulario}/>
+        <Route path="/about" exact component = {About}/>
+        <Route path="/comments" exact component = {Comments}/>
+      </Switch>
+    );
+  }
+
   return (
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact component = {IndexPage}  />
-            <Route path="/contact" exact component = {Contact}  />
-            <Route path="/editions" exact component = {Editions}  />
-            <Route path="/login" exact component = {Login}  />
-            <Route path="/formulario" exact component = {Formulario}/>
-            <Route path="/about" exact component = {About}/>
-            <Route path="/comments" exact component = {Comments}/>
-          </Switch>
-       
-        </BrowserRouter>
-           
-        
-  ) 
-  
-  
-}
+        <AuthContext.Provider value={
+          {
+            isLoggedIn: isLoggedIn,
+            user: user,    
+            login: login,
+            logout: logout
+          }
+        }>
+          <BrowserRouter>
+              {routes}
+          </BrowserRouter>
+          </AuthContext.Provider>
+  ) ;
+};
 
 
 export default App;

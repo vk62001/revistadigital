@@ -21,15 +21,15 @@ const About = () => {
             desktop:block desktop:w-2/3 desktop:mx-72 desktop:my-0
             tablet:block tablet:w-4/5 tablet:mx-20 tablet:my-20
             phone:block phone:w-full phone:mx-8 phone:-my-4">
-           <h8 class="mb-1 font-sans text-3xl font-bold text-blue-900">Objetivos</h8>
-           <p class="mb-1 mt-10 font-sans text-4x2 font-bold text-green-600">Enfoque y alcance</p>
+           <h8 className="mb-1 font-sans text-3xl font-bold text-blue-900">Objetivos</h8>
+           <p className="mb-1 mt-10 font-sans text-4x2 font-bold text-green-600">Enfoque y alcance</p>
            <p className=" mt-10 ">
            La Revista Digital Universitaria es una publicación electrónica bimestral de comunicación social de la ciencia, dirigida <br/>
            a la comunidad universitaria y al público interesado. Su principal objetivo es comunicar temas relacionados con el<br/>
            desarrollo de las ciencias, las humanidades, las artes y la tecnología, con la finalidad de compartir el conocimiento <br/>
             y despertar el interés e inquietud de sus lectores por las diversas áreas del sabe
              </p>
-             <p class="mb-1 mt-20 font-sans text-4x2 font-bold text-green-600">Objetivos especificos</p>
+             <p className="mb-1 mt-20 font-sans text-4x2 font-bold text-green-600">Objetivos especificos</p>
              <p className=" mt-5 ">
              Ser puente y espacio de comunicación horizontal entre los generadores del conocimiento, los comunicadores de la<br/>
               ciencia y el público lector.
