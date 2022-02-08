@@ -48,7 +48,7 @@ const IndexPage = () => {
                                         tablet:grid tablet:grid-cols-2 tablet:gap-4 tablet:w-11/12  
                                         laptop:w-5/6 desktop:w-11/12">
                                             
-                                <Link  to="/formulario"
+                                <Link  to="/login"
                                     className=" phone:py-2 rounded-full bg-blue-900 text-white phone:text-2xl text-center
                                     bg-white p-3 hover:bg-blue-500 hover:text-white
                                     transform transition-all hover:-translate-y-1 hover:scale-110duration-300"

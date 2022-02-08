@@ -4,12 +4,22 @@ import { Link, NavLink, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import NavBar from '../../components/Navbar';
 import { Alert } from 'bootstrap';
+<<<<<<< HEAD
 import { AuthContext } from '../../context/auth-context';
 
 
 const Login = () => {
       let history = useHistory();
       let auth = useContext(AuthContext);
+=======
+import swal from 'sweetalert2';
+
+
+
+const Login = () => {
+
+      const history = useHistory;
+>>>>>>> 615e50cff68f68ede04e97d4594d69ee454b9861
       const [session, setSession] = useState(true);
       const [register, setRegister] = useState(false);
       const [password2, setPassword2] = useState(false);
@@ -56,7 +66,8 @@ const Login = () => {
           e.preventDefault();
           let objLogin = {
             email : mailLogin,
-            password : passLogin
+            password : passLogin,
+            
           }
           console.log(objLogin);
           axios.post("http://localhost:8000/api/login", objLogin)
