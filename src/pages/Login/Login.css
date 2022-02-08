@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container{
     position: absolute;
     
@@ -44,26 +45,15 @@
      text-align: center;
      
     
+=======
+.login{
+    /* The image used */
+    background-image: url(../../assets/images/Fondo.png);
+>>>>>>> 69b87c71c72af56eaad840dbf309130ab181e757
 
- }
- .boton2{
-    display: block;
-    margin: auto;
-    width: 50%;
-    height: 40px;
-    border: none;
-    cursor:pointer;
-    border-radius: 10px;
-    color: #fff;
-    text-align: center;
-    left: 0;
-    bottom: 0;
-   
-
-}
- .contraseña1{
-    display: block;
+    /* Full height */
     width: 100%;
+<<<<<<< HEAD
     height: 40px;
     padding: 5px 6px;
     margin-bottom: 20px;
@@ -75,3 +65,13 @@
 
  
  
+=======
+     
+
+    /* Center and scale the image nicely */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+>>>>>>> 69b87c71c72af56eaad840dbf309130ab181e757

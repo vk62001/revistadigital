@@ -1,87 +1,80 @@
 import React, { useState } from 'react';
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import './Formulario.css';
-import logo from '../../assets/images/Revista.png';
+import revista from '../../assets/images/Revista.png';
 
 
 
 
 
 
-export default function Formulario() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [Apellido, setApellido] = useState("");
-    const [nombre, setNombre] = useState("");
-  
-   // function validateForm() {
-     // return email.length > 0 && password.length > 0;
-    //}
-  
-    function handleSubmit(event) {
-      event.preventDefault();
-    }
+const Formulario = () => {
     
-    return (
-      
-      <React.Fragment>
-          <div className="logo">
-          <img src={logo}/>
-              </div>
-      <div className="contenedor">
-            
+  return (
+    
+    
+    <div className=" Formulario min-h-screen flex items-center
+    justify-center bg-white">
+      <div className=" absolute inset-y-44 left-24
+      laptop:block laptop:w-1/3 laptop:left-28 laptop:my-2
+      desktop:block desktop:w-2/5 desktop:left-24 desktop:p-8
+      tablet:block tablet:w-1/3 tablet:left-16 tablet:my-20
+      phone:block phone:w-1/4 phone:left-6 phone:my-28">
+      <img className="w-full" src={revista}/>
+      </div>
+      <div className=" absolute inset-y-20 right-16 p-16 bg-gray-100 absolute rounded-3xl shadow-2xl w-1/3
+      laptop:block laptop:w-2/5 laptop:right-8 laptop:my-2
+      desktop:block desktop:w-1/3 desktop:right-16 desktop:my-8
+      tablet:block tablet:w-1/2 tablet:right-8 tablet:my-4
+      phone:block phone:w-auto phone:p-8 phone:right-0">
         
-        <div className="h1">
-        <h1>Crear Cuenta</h1>
-        </div>
-        <Form onSubmit={handleSubmit}>
-        <Form.Label>Nombre</Form.Label>
-         <Form.Control
-              type="text"
-              value={nombre}
-              onChange={(e) => setNombre(e.target.value)}
-            />
-          <Form.Group controlId="email">
-            <Form.Label>Apellido: </Form.Label>
-            <Form.Control
-              type="text"
-              value={Apellido}
-              onChange={(e) => setApellido(e.target.value)}
-            />
-         <Form.Label>Correo</Form.Label>
-         <Form.Control
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </Form.Group>
-          
-          <Form.Group size="sm" controlId="password">
-            <Form.Label>Contraseña: </Form.Label>
-            <div className="contraseña1">
-            <Form.Control
-             autoFocus
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            </div>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Acepto terminos y condiciones" />
-    </Form.Group>
-    <div className="boton">
-    <Button variant="primary" type="submit">
-    Registrar
-  </Button>
+      <h1 className="text-3xl font-bold mb-10 text-blue-900">Crear Una Cuenta</h1>
 
-</div>
-  
-        </Form>
-        
+      <form className="space-y-5">
+
+       <div className="mb-3">
+         <label className="block mb-2 font-bold text-blue-900">Nombre</label>
+         <input type="text" className="w-full border-2 
+         border-gray-400 py-1 px-1 rounded outline-none focus:border-blue-400"placeholder="Ingrese su nombre"/>
+       </div>
+
+       <div>
+       <label className="block mb-2 font-bold text-blue-900">Apellido</label>
+         <input type="text" className="w-full border-2 
+         border-gray-400 py-1 px-1 rounded outline-none focus:border-blue-400"placeholder="Ingrese su apellido"/>
+       </div>
+
+       <div>
+       <label className="block mb-1 font-bold text-blue-900">Correo</label>
+         <input type="email" className="w-full border-2 
+         border-gray-400 py-1 px-1 rounded outline-none focus:border-blue-400"placeholder="Ingrese su correo"/>
+       </div>
+
+       <div>
+       <label className="block mb-1 font-bold text-blue-900">Contraseña</label>
+         <input type="password" className="w-full border-2 
+         border-gray-400 py-1 px-4 rounded outline-none focus:border-blue-400"placeholder="Ingrese su contraseña"/>
+       </div>
+
+       <div className="flex items-center">
+         <input type="checkbox"/>
+         <label className="ml-2 text-blue-900 text-sm">Estoy de acuerdo con terminos y condiciones</label>
+         
+       </div>
+       
+       <button className="block w-full bg-blue-900 hover:bg-blue-500 p-4 rounded text-white">Registrarme</button>
+      </form>
+       
+
+
       </div>
       
-      </React.Fragment>
-    );
-  }
+   
+    
+    
+   
+   </div>
+   
+  );
+}
+
+export default Formulario;

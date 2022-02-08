@@ -53,16 +53,7 @@
   height: 35%;
 }
 
-.titulo{
-  position: fixed;
-  top: 10%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  z-index: 2;
-  color: white;
-}
+
 
 .logotec{
   position: fixed;
@@ -71,12 +62,5 @@
   z-index: 2;
   width: 25%;
 }
-.logocomi{
-  position: absolute;
-  float: right;
-  width: 35%;
-  right: 65px;
-  top: 50;
-  margin-top: -50px;
 
-}
+
