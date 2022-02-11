@@ -43,8 +43,8 @@ const Administrator = () => {
       <h1>Administrador Revista Digital</h1>
       <div className="container">
         <div className='input '>
-          <input id ="titulo" type="text" className='b-1' onChange={fileSelectHandler} placeholder="Titulo del archivo"/>
-          <input id ="archivo-input" type="file" accept="application/pdf, application/vnd.ms-excel" onChange={fileSelectHandler} />
+          <input id ="titulo" type="text" className='border-2 b-1' onChange={fileSelectHandler} placeholder="Titulo del archivo"/>
+          <input id ="archivo-input" type="file"  accept="application/pdf, application/vnd.ms-excel" onChange={fileSelectHandler} />
           <label htmlFor='archivo-input'> 
             <Tooltip title="Adjuntar un archivo">
               <IconButton color="primary" component="span">
