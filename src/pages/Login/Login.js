@@ -86,7 +86,7 @@ const Login = () => {
 
      async function newRegister(e){
       e.preventDefault(e);
-      await axios.post("http://localhost:8000/api/register",user)
+      await axios.post("http://localhost:8000/api/auth/register",user)
        .then(res=>{
             console.log(res.data.data.email);
             if(res.data.data.email){
@@ -96,8 +96,8 @@ const Login = () => {
               //logear
             }
        })
-       .catch(err=>{alert("Porfavor Rellena todos los campos")});
-       setErrors('El Usuario se ha Registrado con Exito')
+       .catch(err=>{alert("Error en el sistema")});
+      //  setErrors('El Usuario se ha Registrado con Exito')
        setUser({name:"",email:"",password:""})///Limpia los campos
 
      }

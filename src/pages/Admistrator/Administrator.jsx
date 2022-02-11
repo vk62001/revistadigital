@@ -7,20 +7,23 @@ import axios from 'axios';
 
 const initialValues = {
   archivo: null,
-  archivoNombre: "",
   archivoURL:""
 }
 const Administrator = () => {
 
   const [archivo, setArchivo] = useState(initialValues);
+  const [titulo, setTitulo] = useState('')
 
   const fileSelectHandler = (e) => {
     setArchivo({
       archivo: e.target.files[0],
-      archivoNombre: e.target.files[0].name,
       titulo: e.target.files[0].titulo
     })
-  }
+  };
+
+  const handleChange = e =>{
+    setTitulo(e.target.value);
+  };
 
   const onSubmit = e =>{
 
@@ -34,16 +37,34 @@ const Administrator = () => {
       }
     })
     .then(res=>{
+      if(res.data.file){
+        //tenemos que recargar el get
+        //jalar todos los campos de la tabla titulos
+        //editar el nombre del titulo con otro end point
+        //eliminar archivo con optro endpoint enviando el id de la revista
+        getFiles();
+      }else{
+        alert("ha sucedido un error")
+      }
+    })
+    .catch(err=>console.log(err));
+  }
+
+
+  const getFiles = ()=> {
+    const files =  axios.get("http://localhost:8000/api/getFiles")
+    .then(res=>{
       console.log(res);
     })
     .catch(err=>console.log(err));
+
   }
 
   return <div>
       <h1>Administrador Revista Digital</h1>
       <div className="container">
         <div className='input '>
-          <input id ="titulo" type="text" className='border-2 b-1' onChange={fileSelectHandler} placeholder="Titulo del archivo"/>
+          <input id ="titulo" name="name" type="text" className='border-2 b-1' onChange={handleChange} placeholder="Titulo del archivo"/>
           <input id ="archivo-input" type="file"  accept="application/pdf, application/vnd.ms-excel" onChange={fileSelectHandler} />
           <label htmlFor='archivo-input'> 
             <Tooltip title="Adjuntar un archivo">
