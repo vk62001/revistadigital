@@ -52,7 +52,7 @@ const Administrator = () => {
 
 
   const getFiles = ()=> {
-    const files =  axios.get("http://localhost:8000/api/getFiles")
+    const files =  axios.get("http://localhost:8000/api/list")
     .then(res=>{
       console.log(res);
     })
