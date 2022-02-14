@@ -5,7 +5,6 @@ import { AuthContext } from '../context/auth-context';
 
 const NavBar = props => {
     const auth = useContext(AuthContext);
-    console.log(auth)
     const white = props.white
     const [menu, setMenu] = useState(false);
 
@@ -54,9 +53,15 @@ const NavBar = props => {
                 <i className="fas fa-bookmark"></i>
                 <p className="m-0 text-xs ml-1 ">Sobre la Revista</p>
                 </Link>
+                { auth.user.admin && 
+                    <Link to={"/admin"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
+                        <i className="fas fa-user-cog"></i>
+                        <p className="m-0 text-xs ml-1">Admin</p>
+                    </Link>
+                }
                 <Link to={"/comments"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
-                <i className="fas fa-comment-dots"></i>
-                <p className="m-0 text-xs ml-1">Comentarios</p>
+                    <i className="fas fa-comment-dots"></i>
+                    <p className="m-0 text-xs ml-1">Comentarios</p>
                 </Link>
                 <Link to={"/contact"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
                 <i className="fas fa-address-card"></i>
@@ -81,6 +86,12 @@ const NavBar = props => {
                         <i className="fas fa-book-open"></i>
                         <p className="m-0 text-xs ml-1">Ediciones</p>
                      </Link>
+                     { auth.user.admin && 
+                     <Link to={"/admin"} className={"p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
+                        <i className="fas fa-bookmark"></i>
+                        <p className="m-0 text-xs ml-1 ">Admin</p>
+                     </Link>
+                     }
                      <Link to={"/about"} className={"p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
                         <i className="fas fa-bookmark"></i>
                         <p className="m-0 text-xs ml-1 ">Sobre la Revista</p>

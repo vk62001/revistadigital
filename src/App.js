@@ -49,7 +49,9 @@ const  App = () => {
         <Route path="/formulario" exact component = {Formulario}/>
         <Route path="/about" exact component = {About}/>
         <Route path="/comments" exact component = {Comments}/>
-        <Route path={"/admin"} exact component={Administrator} />
+        {user.admin &&
+          <Route path={"/admin"} exact component={Administrator} />
+        }
       </Switch>
     );
   }else{
