@@ -6,6 +6,7 @@ import AttactchFileIcon from '@material-ui/icons/AttachFile';
 import axios from 'axios';
 import { useEffect } from 'react';
 import moment from 'moment';
+import NavBar from '../../components/Navbar';
 import ModalPortal from '../../components/Modal';
 
 const initialValues = {
@@ -81,12 +82,13 @@ const Administrator = () => {
       name:newTitle,
       id: idUpdate
     }
-    //axios.post('ruta'. objUpdat);
+    axios.post('http://localhost:8000/api/update'. objUpdat);
     alert("se hace actualizado tu archivo");
     openModal();
   }
 
   const deleteFiles = (id) =>{
+    axios.delete('http://localhost:8000/api/delete/{id}',id);
     alert("esta seguro que deseas eliminar");
   
   }
@@ -124,7 +126,11 @@ const Administrator = () => {
 
 
   return <div>
-      <h1>Administrador Revista Digital</h1>
+
+         <NavBar 
+                    white={false}
+                     />
+    <h1>Administrador Revista Digital</h1>
       <div className="container">
         <div className='input '>
           <input id ="titulo" name="name" type="text" className='border-2 b-1' onChange={e => handleChange(e)} placeholder="Titulo del archivo"/>
