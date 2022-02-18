@@ -82,15 +82,19 @@ const Administrator = () => {
       name:newTitle,
       id: idUpdate
     }
-    axios.post('http://localhost:8000/api/update'. objUpdat);
-    alert("se hace actualizado tu archivo");
+    axios.post('http://localhost:8000/api/update', objUpdate);
+    alert("se ha actualizado tu archivo");
+    getFiles()
     openModal();
   }
 
   const deleteFiles = (id) =>{
-    axios.delete('http://localhost:8000/api/delete/{id}',id);
-    alert("esta seguro que deseas eliminar");
-  
+    if  ( window.confirm("esta seguro que deseas eliminar")){
+         axios.delete(`http://localhost:8000/api/delete/${id}`,id);
+         alert("Se ha eliminado correctamente");
+         getFiles()
+        
+    }
   }
 
   
@@ -114,10 +118,12 @@ const Administrator = () => {
               <span className="inline-block w-1/3 laptop:hidden font-bold">Actions</span>
               <button 
                 onClick={()=>prepareModal(e)}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">Edit</button>
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded
+                  transform transition-all hover:-translate-y-1 hover:scale-110 duration-300">Editar</button>
               <button 
                 onClick={()=>deleteFiles(e.id)}
-                className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded">Delete</button>
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded
+                transform transition-all hover:-translate-y-1 hover:scale-110 duration-300">Borrar</button>
             </td>
           </tr>
         )
@@ -130,11 +136,14 @@ const Administrator = () => {
          <NavBar 
                     white={false}
                      />
-    <h1>Administrador Revista Digital</h1>
+    <h1 className='font-mono text-5xl font-bold uppercase text-center ml-8 text-blue-900 
+    '>ADMINISTRADOR REVISTA DIGITAL<br/> TECNOLOGICO DE COMITANCILLO <br/>OAXACA</h1>
       <div className="container">
         <div className='input '>
-          <input id ="titulo" name="name" type="text" className='border-2 b-1' onChange={e => handleChange(e)} placeholder="Titulo del archivo"/>
-          <input id ="archivo-input" type="file"  accept="application/pdf, application/vnd.ms-excel" onChange={fileSelectHandler} />
+          <input className='mt-5 ml-8 p-2.5 border-2 border-gray-400
+           bg-white text-base outline-none focus:ring-2 focus:ring-blue-600' id ="titulo" name="name" type="text" onChange={e => handleChange(e)} placeholder="Titulo del archivo" />
+          <br/>
+          <input className="ml-8" id ="archivo-input" type="file"  accept="application/pdf, application/vnd.ms-excel" onChange={fileSelectHandler} />
           <label htmlFor='archivo-input'> 
             <Tooltip title="Adjuntar un archivo">
               <IconButton color="primary" component="span">
@@ -148,13 +157,13 @@ const Administrator = () => {
           </Button>
         </div>
         <div className='tabla'>
-          <table className="min-w-full border-collapse block laptop:table">
+          <table className="border-separate min-w-full block laptop:table ml-8">
             <thead className="block laptop:table-header-group">
               <tr className="border border-grey-500 laptop:border-none block laptop:table-row absolute -top-full laptop:top-auto -left-full laptop:left-auto  laptop:relative ">
-                <th className="bg-gray-600 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">No</th>
-                <th className="bg-gray-600 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">Título</th>
-                <th className="bg-gray-600 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">Fecha</th>
-                <th className="bg-gray-600 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">Actions</th>
+                <th className="bg-blue-900 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">No.</th>
+                <th className="bg-blue-900 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">Título</th>
+                <th className="bg-blue-900 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">Fecha</th>
+                <th className="bg-blue-900 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">Acciones</th>
               </tr>
             </thead>
             <tbody className="block laptop:table-row-group">
@@ -179,20 +188,23 @@ const Administrator = () => {
                 headerClass=''
                 contentClass = ''
               >
-                <div className='container'>
-                <h3>Inserte el nuevo nombre</h3>
-                <input type="text" value={newTitle}  onChange={e=>setNewTitle(e.target.value)} />
-                  <div className='flex'>
-                    <button className='bg-red-500'
+                <div className='grid justify-items-center py-8 px-5 pb-4 rounded-xl'>
+                <h3 className="w-full text-xl text-center mb-2 -mt-5 text-blue-900 font-black" >Actualizar</h3>
+                <input className="w-2/3 border border-gray-500 p-2 bg-white text-base outline-none focus:ring-2 focus:ring-blue-600" type="text" value={newTitle}  onChange={e=>setNewTitle(e.target.value)} placeholder="Nuevo Titulo" />
+                  <div className='flex flex-col'>
+                    <button 
+                      className="w-full py-2.5 px-10 mt-5 border-none text-sm bg-blue-900 cursor-pointer text-white outline-none rounded
+                      transform transition-all hover:-translate-y-1 hover:scale-110 duration-300"
+                      onClick={e=>(updateFiles(e))}
+                    >Actualizar</button>
+                    <br/>
+                    <button className='w-full py-2.5 px-10 mt-0 border-none text-sm bg-red-600 cursor-pointer text-white outline-none rounded
+                      transform transition-all hover:-translate-y-1 hover:scale-110 duration-300'
                       onClick={e=>{
                         e.preventDefault();
                         openModal();
                       }}
                     >Cancelar</button>
-                    <button 
-                      className="bg-blue-600"
-                      onClick={e=>(updateFiles(e))}
-                    >Actualizar</button>
                   </div>
                 </div>
                 

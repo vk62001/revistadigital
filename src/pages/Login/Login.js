@@ -59,10 +59,9 @@ const Login = () => {
             password : passLogin,
             
           }
-          console.log(objLogin);
           axios.post("http://localhost:8000/api/auth/login", objLogin)
           .then(res => {
-            console.log(res.data.success);
+            console.log(res.data);
             if(res.data.success){
               auth.login(res.data.user);
               history.push("/editions");
@@ -161,7 +160,7 @@ const Login = () => {
                   >Registrarse </button>
                   <button 
                     className="w-full py-2.5 px-10 mt-5 border-none text-sm bg-gray-600 cursor-pointer text-white outline-none rounded
-                    transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
+                    transform transition-all hover:-translate-y-1 hover:scale-110 duration-300"
                     onClick = {enterRegister}
                   >Iniciar sesión</button>
               </form>

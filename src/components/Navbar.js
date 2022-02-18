@@ -48,6 +48,7 @@ const NavBar = props => {
                             <i className="fas fa-book-open"></i>
                             <p className="m-0 text-xs ml-1">Ediciones</p>
                     </Link>
+                    
                 }
                 <Link to={"/about"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
                 <i className="fas fa-bookmark"></i>
@@ -58,6 +59,8 @@ const NavBar = props => {
                         <i className="fas fa-user-cog"></i>
                         <p className="m-0 text-xs ml-1">Admin</p>
                     </Link>
+
+                    
                 }
                 <Link to={"/comments"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
                     <i className="fas fa-comment-dots"></i>
@@ -66,7 +69,11 @@ const NavBar = props => {
                 <Link to={"/contact"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
                 <i className="fas fa-address-card"></i>
                 <p className="m-0 text-xs ml-1">Contacto</p>
-                </Link>            
+                </Link>        
+                <Link to={"/logout" }  className={(white ? 'text-white':'text-blue-600') + ' p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
+                            <i className="fas fa-user"></i>
+                            <p className="m-0 text-xs ml-2"></p>
+                    </Link>    
                 </ul>
             </div>
             {menu && 

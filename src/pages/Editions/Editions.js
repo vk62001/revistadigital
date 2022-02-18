@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Editions.css';
 import logo from '../../assets/images/Revista.png';
 import NavBar from '../../components/Navbar';
+import axios from 'axios';
 
 const Editions = () => {
+
+    const [files, setFiles] = useState([]);
+
+
+    useEffect(()=>{
+        getFiles();
+    },[])
+    
+    
+    const getFiles = ()=>{
+        axios.get("http://localhost:8000/api/list")
+        .then(res=>{
+            console.log(res.data, 'Datos');
+            setFiles(res.data);
+        })
+        .catch(err=>console.log(err));
+    };
+
     return (
         <div>
           
                  <NavBar 
                     white={false}
                  />
+                
            <div ClassName="Contenedor">
                <div ClassName="">
                <h1 className="mb-1 font-sans text-3xl font-bold text-blue-900 text-center">Ediciones</h1>
