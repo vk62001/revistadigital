@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useCallback} from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {  Route, Switch} from 'react-router-dom';
 import {AuthContext} from './context/auth-context';
 import './App.css';
 import Contact from './pages/Contact/Contact';
@@ -11,10 +11,13 @@ import About from './pages/AboutRevist/AboutRevist';
 import Comments from './pages/Comments/Comments';
 import Administrator from './pages/Admistrator/Administrator';
 
+
 const  App = () => {
+ 
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(false);
+  
 
   const login = useCallback((user)=>{
     setUser(user);
@@ -22,11 +25,14 @@ const  App = () => {
     localStorage.setItem('userData', JSON.stringify(user))
   },[]);
 
-  const logout = useCallback(()=>{
+   const logout = () => {
+     console.log("Entre al logout")
     setUser(null);
     setIsLoggedIn(false);
     localStorage.removeItem('userData');
-  },[]);
+   
+
+   };
 
 
   useEffect(() => {
@@ -43,12 +49,12 @@ const  App = () => {
   if(user){
     routes = (
       <Switch>
-        <Route path="/" exact component = {IndexPage}  />
-        <Route path="/contact" exact component = {Contact}  />
-        <Route path="/editions" exact component = {Editions}  />
-        <Route path="/formulario" exact component = {Formulario}/>
-        <Route path="/about" exact component = {About}/>
-        <Route path="/comments" exact component = {Comments}/>
+        <Route path="/" exact component={IndexPage}  />
+        <Route path="/contact" exact component={Contact}  />
+        <Route path="/editions" exact component={Editions}  />
+        <Route path="/formulario" exact component={Formulario}/>
+        <Route path="/about" exact component={About}/>
+        <Route path="/comments" exact component={Comments}/>
         {user.admin &&
           <Route path={"/admin"} exact component={Administrator} />
         }
@@ -74,11 +80,12 @@ const  App = () => {
             user: user,    
             login: login,
             logout: logout
+
           }
         }>
-          <BrowserRouter>
+         
               {routes}
-          </BrowserRouter>
+          
           </AuthContext.Provider>
   ) ;
 };

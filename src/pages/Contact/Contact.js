@@ -1,9 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Contact.css';
 import sep from '../../assets/images/sep.png';
 import NavBar from '../../components/Navbar';
+import axios from 'axios';
 
 const Contact = () => {
+      
+    const [nombre,setNombre] = useState('');
+    const [correo,setCorreo] = useState('');
+    const [mensaje,setMensaje] = useState('');
+    const [archivo, setArchivo] = useState('');
+
+    const fileSelectHandler = (e) =>{
+        console.log(e.target.files)
+        setArchivo({
+            nombre: e.target.files[0],
+            correo: e.target.files[0],
+            mensaje: e.target.files[0]
+        })
+    }
+
+    const handleChange = e =>{
+        console.log(setNombre)
+        setNombre(e.target.value)
+    }
+
+    const handleInputChange = e =>{
+        setCorreo(e.target.value)
+
+    }
+
+    const onInputChange = e => {
+        setMensaje(e.target.value)
+    }
+    
+    const onSubmit = e => {
+        e.preventDefault();
+        const fd = new FormData();
+        fd.append('nombre',nombre);
+        fd.append('correo',correo);
+        fd.append('mensaje',mensaje);
+
+         axios.post("http://localhost:8000/api/send",fd,{
+            onUploadProgress: progressEvent => {
+                console.log('Upload progress: ' + Math.round(progressEvent.loaded / progressEvent.total * 100)+ "%");
+              }
+         })
+
+    }
+
+
+
     return (
         <div>
                  <NavBar 
@@ -63,12 +110,31 @@ const Contact = () => {
                                     desktop:w-8/12 desktop:py-8 desktop:px-5 desktop:bg-gray-100 desktop:rounded-xl desktop:shadow-2xl desktop:float-left
                                      ">
                                 <h2 className="text-3xl text-center mb- text-blue-900 font-sans font-bold uppercase">Contacto</h2>
-                                <input className="w-full rounded mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600" type="text" placeholder="Ingrese su nombre"/>
-                                <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600" type="email" placeholder="Ingrese su correo"/>
-                                <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600"type= "text" placeholder="Asunto"s/>
-                                <input className="w-full h-24 mt-5 p-2.5 pb-16 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600"type= "text" placeholder="Mensaje" maxLength={500}/>
+                                <input className="w-full rounded mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600" 
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                onChange={e => handleChange(e)}
                                 
-                                <button className="w-full rounded py-2.5  px-10 mt-10 border-none text-sm bg-blue-900 font-semibold cursor-pointer text-white outline-none hover:bg-blue-500 transform transition-all hover:-translate-y-1 hover:scale-110duration-300  "  type="button">
+                                placeholder="Nombre"/>
+                                <input className="w-full mt-5 p-2.5 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600"
+                                id="correo" 
+                                type="email"
+                                name="correo"
+                                onChange={ e => handleInputChange(e)}
+                                
+                                placeholder="Correo"/>
+                                <input className="w-full h-24 mt-5 p-2.5 pb-16 border-none bg-white text-base outline-none focus:ring-2 focus:ring-blue-600"
+                                type= "text"
+                                name="mensaje"
+                                id="mensaje" 
+                                onChange={e => onInputChange(e)}
+                                placeholder="Mensaje"
+                                 maxLength={500}/>
+                                
+                                <button className="w-full rounded py-2.5  px-10 mt-10 border-none text-sm bg-blue-900 font-semibold cursor-pointer text-white outline-none hover:bg-blue-500 transform transition-all hover:-translate-y-1 hover:scale-110duration-300  "  type="button"
+                                variant="contained"
+                                onClick={onSubmit}>
                                     Enviar
                                 </button>
                             </form>

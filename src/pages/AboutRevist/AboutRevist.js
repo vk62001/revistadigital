@@ -24,18 +24,18 @@ const About = () => {
            <h8 className="mb-1 font-sans text-3xl font-bold text-blue-900">Objetivos</h8>
            <p className="mb-1 mt-10 font-sans text-4x2 font-bold text-green-600">Enfoque y alcance</p>
            <p className=" mt-10 ">
-           La Revista Digital Universitaria es una publicación electrónica bimestral de comunicación social de la ciencia, dirigida <br/>
-           a la comunidad universitaria y al público interesado. Su principal objetivo es comunicar temas relacionados con el<br/>
-           desarrollo de las ciencias, las humanidades, las artes y la tecnología, con la finalidad de compartir el conocimiento <br/>
-            y despertar el interés e inquietud de sus lectores por las diversas áreas del sabe
+           La Revista Digital Universitaria es una publicación electrónica bimestral de comunicación social de la ciencia, dirigida
+           a la comunidad universitaria y al público interesado.Su principal objetivo es comunicar <br/>  temas relacionados con el
+           desarrollo de las ciencias, las humanidades, las artes y la tecnología, con la finalidad de compartir el conocimiento 
+            y despertar el interés e inquietud de sus lectores por las <br/> diversas áreas del saber
              </p>
              <p className="mb-1 mt-20 font-sans text-4x2 font-bold text-green-600">Objetivos especificos</p>
              <p className=" mt-5 ">
-             Ser puente y espacio de comunicación horizontal entre los generadores del conocimiento, los comunicadores de la<br/>
+             Ser puente y espacio de comunicación horizontal entre los generadores del conocimiento, los comunicadores de la
               ciencia y el público lector.
              </p>
              <p className=" mt-5 ">
-             Difundir investigaciones, evaluaciones, innovaciones y experiencias que coadyuven a la reflexión, el debate y la<br/>
+             Difundir investigaciones, evaluaciones, innovaciones y experiencias que coadyuven a la reflexión,<br/>  el debate y la
              discusión de los procesos educativos.
              </p>
              <p className=" mt-5 ">

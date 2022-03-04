@@ -8,41 +8,68 @@ import { useEffect } from 'react';
 import moment from 'moment';
 import NavBar from '../../components/Navbar';
 import ModalPortal from '../../components/Modal';
+import logo from '../../assets/images/logo.png';
 
 const initialValues = {
   archivo: null,
   archivoURL:""
 }
+const initial = {
+  imagen: null,
+  imagenURL:""
+}
 const Administrator = () => {
 
+  const [imagen, setSelectedFile] = useState(initial);
   const [archivo, setArchivo] = useState(initialValues);
   const [titulo, setTitulo] = useState('');
+  const [descripcion,setDescripcion] = useState(''); 
   const [files, setFiles] = useState([]);
   const [newTitle, setNewTitle] =useState('');
   const [show, setShow] = useState(false);
   const [idUpdate, setIdUpdate] = useState();
   
   const fileSelectHandler = (e) => {
+    console.log(e.target.files)
     setArchivo({
       archivo: e.target.files[0],
-      titulo: e.target.files[0].titulo
+      titulo: e.target.files[0],
+      descripcion: e.target.files[0].descripcion,
     })
+  
+   
   };
+  const changeHandler = (e) => {
+    console.log(e.target.files)
+   setSelectedFile({
+     imagen: e.target.files[0]
+   })
+   }
+
 
   useEffect(()=>{
     getFiles();
   },[])
+ 
+  
 
   const handleChange = e =>{
     setTitulo(e.target.value);
   };
+
+  const handleInputChange = e =>{
+    setDescripcion(e.target.value)
+  }
 
   const onSubmit = e =>{
 
     e.preventDefault();
     const fd = new FormData();
     fd.append('file', archivo.archivo, archivo.archivoNombre);
+    fd.append("image", imagen.imagen, imagen.archivoNombre);
     fd.append('titulo', titulo);
+    fd.append('description', descripcion);
+    
     axios.post("http://localhost:8000/api/upload", fd,{
       onUploadProgress: progressEvent => {
         console.log('Upload progress: ' + Math.round(progressEvent.loaded / progressEvent.total * 100)+ "%");
@@ -113,7 +140,7 @@ const Administrator = () => {
               <span className="inline-block w-1/3 laptop:hidden font-bold">Título</span>
               <span>{e.name}</span>
               </td>
-            <td className="p-2 laptop:border laptop:border-grey-500 text-left block laptop:table-cell"><span className="inline-block w-1/3 laptop:hidden font-bold">Fecha</span>{moment(e.created_ad).format('DD/MM/YYYY')}</td>
+            <td className="p-2 laptop:border laptop:border-grey-500 text-left block laptop:table-cell"><span className="inline-block w-1/3 laptop:hidden font-bold">Fecha</span>{moment(e.created_at).format('DD/MM/YYYY')}</td>
             <td className="p-2 laptop:border laptop:border-grey-500 text-left block laptop:table-cell">
               <span className="inline-block w-1/3 laptop:hidden font-bold">Actions</span>
               <button 
@@ -136,14 +163,26 @@ const Administrator = () => {
          <NavBar 
                     white={false}
                      />
-    <h1 className='font-mono text-5xl font-bold uppercase text-center ml-8 text-blue-900 
+       
+    <h1 className='font-mono text-2xl font-bold uppercase text-center ml-8 text-blue-900 
     '>ADMINISTRADOR REVISTA DIGITAL<br/> TECNOLOGICO DE COMITANCILLO <br/>OAXACA</h1>
-      <div className="container">
-        <div className='input '>
-          <input className='mt-5 ml-8 p-2.5 border-2 border-gray-400
-           bg-white text-base outline-none focus:ring-2 focus:ring-blue-600' id ="titulo" name="name" type="text" onChange={e => handleChange(e)} placeholder="Titulo del archivo" />
+    <div className='-mt-36 ml-28'> 
+      <img className="w-40" src={logo}/></div>
+    
+      <div className="container mt-4 flex justify-center">
+        <div className='input w-5/12 bg-gray-200 px-8 shadow-2xl
+        rounded-xl'>
+          <label className="w-full text-2xl ml-44 mb-2 uppercase -mt-9 text-blue-900 font-black">Revista </label>
           <br/>
-          <input className="ml-8" id ="archivo-input" type="file"  accept="application/pdf, application/vnd.ms-excel" onChange={fileSelectHandler} />
+          <input className='w-3/4 mt-1 ml-8 p-2.5 border-2 border-gray-400
+           bg-white text-base outline-none focus:ring-2 focus:ring-blue-600' id ="titulo" name="titulo" type="text" onChange={e => handleChange(e)} placeholder="Titulo del archivo" />
+           <br/>
+           <input className='w-3/4 pb-16 h-24 mt-5 ml-8 p-2.5 border-2 border-gray-400
+           bg-white text-base outline-none focus:ring-2 focus:ring-blue-600' id ="description" name="name" type="text" onChange={e => handleInputChange(e)} placeholder="Descripcion" />
+          <br/>
+          <label className='ml-8'> PDF/File:</label>
+          <br/>
+          <input className="ml-8" id ="archivo-input" type="file" name="file" accept="application/pdf, application/vnd.ms-excel" onChange={fileSelectHandler} />
           <label htmlFor='archivo-input'> 
             <Tooltip title="Adjuntar un archivo">
               <IconButton color="primary" component="span">
@@ -151,19 +190,26 @@ const Administrator = () => {
               </IconButton>
             </Tooltip>
           </label>
-          <Button 
+           <br/>
+           <label className="ml-8">Image/File:</label>
+           <br/>
+          <i className='icon icon-upload ml-8 mt-8'></i>
+          <input  id = "image-input" type="file" name="image"
+          accept="image/jpg" onChange={changeHandler}
+          /> 
+          <Button
             variant="contained" onClick={onSubmit}>
             Aceptar
           </Button>
         </div>
-        <div className='tabla'>
+        <div className='tabla mt-2'>
           <table className="border-separate min-w-full block laptop:table ml-8">
             <thead className="block laptop:table-header-group">
               <tr className="border border-grey-500 laptop:border-none block laptop:table-row absolute -top-full laptop:top-auto -left-full laptop:left-auto  laptop:relative ">
                 <th className="bg-blue-900 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">No.</th>
                 <th className="bg-blue-900 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">Título</th>
                 <th className="bg-blue-900 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">Fecha</th>
-                <th className="bg-blue-900 p-2 text-white font-bold laptop:border laptop:border-grey-500 text-left block laptop:table-cell">Acciones</th>
+                <th className="bg-blue-900 p-2 text-white font-bold laptop:border laptop:bordiver-grey-500 text-left block laptop:table-cell">Acciones</th>
               </tr>
             </thead>
             <tbody className="block laptop:table-row-group">

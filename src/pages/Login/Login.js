@@ -93,7 +93,7 @@ const Login = () => {
             }else{
               alert("El usuario se ha registado con Exito");
               //logear
-            }
+            }history.push('/');
        })
        .catch(err=>{alert("Error en el sistema")});
       //  setErrors('El Usuario se ha Registrado con Exito')

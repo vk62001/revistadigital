@@ -1,12 +1,32 @@
-import React, {useState, useContext} from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, {useState, useContext, useCallback} from 'react';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import BackDroop from '../UXComponents/BackDroop';
 import { AuthContext } from '../context/auth-context';
+
+
+import IconButton  from '@material-ui/core/IconButton';
+import ExitTopApp from '@material-ui/icons/ExitToApp';
+//import {logout} from '../App';
+
+
 
 const NavBar = props => {
     const auth = useContext(AuthContext);
     const white = props.white
     const [menu, setMenu] = useState(false);
+    let history = useHistory();
+
+    const logout = () =>{
+        if(window.confirm("Estas seguro que quieres cerrar sesion?")){
+        auth.logout()
+        history.push("/");
+        }
+    }
+    
+
+    
+    
+    
 
     const openMenu = () =>{
         setMenu(!menu);
@@ -39,29 +59,41 @@ const NavBar = props => {
                         <p className="m-0 text-xs ml-2">Inicio</p>
                 </Link>
                 {!auth.user ?
+                        
+                
                     <Link to={"/login" }  className={(white ? 'text-white':'text-blue-600') + ' p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
                             <i className="fas fa-user"></i>
                             <p className="m-0 text-xs ml-2"></p>
+                            
                     </Link>
-                :
+
+                    :
                     <Link to={"/editions"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
-                            <i className="fas fa-book-open"></i>
-                            <p className="m-0 text-xs ml-1">Ediciones</p>
+                     <i className="fas fa-book-open"></i>
+                       <p className="m-0 text-xs ml-1">Ediciones</p>         
                     </Link>
                     
                 }
+                
+                
+              
                 <Link to={"/about"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
                 <i className="fas fa-bookmark"></i>
                 <p className="m-0 text-xs ml-1 ">Sobre la Revista</p>
+                
                 </Link>
-                { auth.user.admin && 
+
+                
+                { auth.user?.admin &&
                     <Link to={"/admin"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
                         <i className="fas fa-user-cog"></i>
                         <p className="m-0 text-xs ml-1">Admin</p>
-                    </Link>
-
+                        
+                       </Link>
                     
                 }
+                
+              
                 <Link to={"/comments"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
                     <i className="fas fa-comment-dots"></i>
                     <p className="m-0 text-xs ml-1">Comentarios</p>
@@ -69,11 +101,18 @@ const NavBar = props => {
                 <Link to={"/contact"} className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
                 <i className="fas fa-address-card"></i>
                 <p className="m-0 text-xs ml-1">Contacto</p>
-                </Link>        
-                <Link to={"/logout" }  className={(white ? 'text-white':'text-blue-600') + ' p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex'}>
-                            <i className="fas fa-user"></i>
-                            <p className="m-0 text-xs ml-2"></p>
-                    </Link>    
+                </Link>  
+                {auth.user &&
+
+                
+                   <li  className={(white ? 'text-white':'text-blue-600') + " p-4 text-white cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
+                      <IconButton color="inherit"  onClick={logout} ><ExitTopApp></ExitTopApp></IconButton>         
+                    </li>
+
+    
+ 
+                  }      
+                
                 </ul>
             </div>
             {menu && 
@@ -85,24 +124,35 @@ const NavBar = props => {
                         <i className="fas fa-home"></i>
                         <p className="m-0 text-xs ml-2">Inicio</p>
                 </Link>
+
+                {!auth.user?
+
                 <Link to={"/login" }  className={'p-4 text-black cursor-pointer text-center hover:border-white hover:border-b-2 border__white flex'}>
                         <i className="fas fa-user"></i>
                         <p className="m-0 text-xs"></p>
                 </Link>
+
+                :
+
                 <Link to={"/editions"} className={"p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
                         <i className="fas fa-book-open"></i>
                         <p className="m-0 text-xs ml-1">Ediciones</p>
                      </Link>
-                     { auth.user.admin && 
+
+                      }   
+                       <Link to={"/about"} className={"p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
+                        <i className="fas fa-bookmark"></i>
+                        <p className="m-0 text-xs ml-1 ">Sobre la Revista</p>
+
+                     </Link>
+
+                     { auth.user?.admin && 
                      <Link to={"/admin"} className={"p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
                         <i className="fas fa-bookmark"></i>
                         <p className="m-0 text-xs ml-1 ">Admin</p>
                      </Link>
                      }
-                     <Link to={"/about"} className={"p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
-                        <i className="fas fa-bookmark"></i>
-                        <p className="m-0 text-xs ml-1 ">Sobre la Revista</p>
-                     </Link>
+                    
                      <Link to={"/comments"} className={"p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex"}>
                         <i className="fas fa-comment-dots"></i>
                         <p className="m-0 text-xs ml-1">Comentarios</p>
@@ -110,7 +160,14 @@ const NavBar = props => {
                      <Link to={"/contact"} className={"p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
                         <i className="fas fa-address-card"></i>
                         <p className="m-0 text-xs ml-1">Contacto</p>
-                     </Link>            
+                     </Link> 
+                     {auth.user &&
+
+                      <li className={"p-4 text-black cursor-pointer hover:border-white hover:border-b-2 border__white flex "}>
+                        <IconButton color="inherit"  onClick={logout} ><ExitTopApp></ExitTopApp></IconButton>  
+                        </li>
+
+                     }           
                 </ul>  
                     </menu>
                 </div>
@@ -122,5 +179,7 @@ const NavBar = props => {
         </div>
     );
 };
+
+
 
 export default NavBar;

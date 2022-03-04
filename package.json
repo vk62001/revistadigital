@@ -11,6 +11,7 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@react-navigation/native": "^6.0.8",
     "@tailwindcss/jit": "^0.1.18",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -20,7 +21,9 @@
     "disqus-react": "^1.1.2",
     "formik": "^2.2.9",
     "grid": "^4.10.8",
+    "material-ui-icons": "^1.0.0-beta.36",
     "moment": "^2.29.1",
+    "navigation": "^6.0.0",
     "postcss-cli": "^9.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.4",
@@ -33,6 +36,7 @@
     "react-scripts": "4.0.3",
     "react-transition-group": "^4.4.2",
     "sweetalert2": "^11.3.10",
+    "use-navigation": "0.0.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
