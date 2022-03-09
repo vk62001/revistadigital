@@ -4,6 +4,7 @@ import './IndexPage.css';
 import logotecnm from '../../assets/images/logotecnm.png';
 import logo1 from '../../assets/images/logo.png';
 import NavBar from '../../components/Navbar';
+import SocialCount from '../../components/SocialCount';
 
 
 const IndexPage = () => {
@@ -51,17 +52,18 @@ const IndexPage = () => {
                                 <Link  to="/login"
                                     className=" phone:py-2 rounded-full bg-blue-900 text-white phone:text-2xl text-center
                                     bg-white p-3 hover:bg-blue-500 hover:text-white
-                                    transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
+                                    transform transition-all hover:-translate-y-1 hover:scale-110 duration-300"
                                 >
                                     Registrarse
                                 </Link>
                                 <Link to="/about"
                                     className="phone:py-2 rounded-full bg-blue-900 text-white phone:text-2xl text-center
                                     bg-white p-4 hover:bg-blue-500 hover:text-white
-                                    transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
+                                    transform transition-all hover:-translate-y-1 hover:scale-110 duration-300"
                                 >
                                     Ver Más
                                 </Link>
+                                <SocialCount></SocialCount>
                         </div>
                         {/* <div className="my-4 phone:flex ">
                         <a 

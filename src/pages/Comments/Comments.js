@@ -43,6 +43,7 @@ const Comments = () => {
        axios.post("http://localhost:8000/api/uploaded",fd,{
           onUploadProgress: progressEvent => {
             console.log('Upload progress: ' + Math.round(progressEvent.loaded / progressEvent.total * 100)+ "%");
+          alert('Gracias por comentar!!!');
           }
        })
        .then(res=>{

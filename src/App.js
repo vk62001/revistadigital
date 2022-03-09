@@ -10,6 +10,7 @@ import Formulario from './pages/Register/Formulario';
 import About from './pages/AboutRevist/AboutRevist';
 import Comments from './pages/Comments/Comments';
 import Administrator from './pages/Admistrator/Administrator';
+import SocialCount from './components/SocialCount';
 
 
 const  App = () => {
