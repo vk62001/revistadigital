@@ -11,7 +11,7 @@ import About from './pages/AboutRevist/AboutRevist';
 import Comments from './pages/Comments/Comments';
 import Administrator from './pages/Admistrator/Administrator';
 import SocialCount from './components/SocialCount';
-
+import Revista from './pages/Revista/Revista';
 
 const  App = () => {
  
@@ -70,6 +70,7 @@ const  App = () => {
         <Route path="/formulario" exact component = {Formulario}/>
         <Route path="/about" exact component = {About}/>
         <Route path="/comments" exact component = {Comments}/>
+        <Route path="/revista/:slug" component={Revista} />
       </Switch>
     );
   }

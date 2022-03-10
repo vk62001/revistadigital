@@ -17,7 +17,6 @@ const Editions = () => {
     const getFiles = ()=>{
         axios.get("http://localhost:8000/api/list")
         .then(res=>{
-            console.log(res.data, 'Datos');
             setFiles(res.data);
         })
         .catch(err=>console.log(err));
@@ -30,9 +29,10 @@ const Editions = () => {
     }
     const renderFiles = () => {
         return files.map(e=>{
-            console.log(e, 'aqui')
+            console.log(e, 'revistas');
+            const image = e.image_path.replace('/var/www/html/revista_digital_server/public/', '');
             return(
-                <div key={e.id} className="mb-64 cursor-pointer" onClick={()=>redirection(e.file_path)}>
+                <div key={e.id} className="mb-72 cursor-pointer" onClick={()=>redirection(e.file_path)}>
                     <p className="mb-1 mt-10 font-sans text-4x2 font-bold text-blue-600 text-center">{moment(e.created_ad).format('DD/MM/YYYY')}</p>
                     <p className=" font-sans mt-4 text-center text-gray-600 text-2xl ">{e.name}</p>
 
@@ -44,7 +44,7 @@ const Editions = () => {
                     laptop:block laptop:w-1/4 laptop:mx-20 laptop:-my-60
                     desktop:block desktop:w-1/6 desktop:mx-72 desktop:-my-60
                     tablet:block tablet:w-1/4 tablet:mx-8 tablet:-my-60
-                    phone:block phone:w-1/2 phone:mx-20 phone:my-4" src={logo} alt="logo"/>
+                    phone:block phone:w-1/2 phone:mx-20 phone:my-4" src={`http://localhost:8000/${image}`} alt="logo"/>
                </div>
             )
         })
