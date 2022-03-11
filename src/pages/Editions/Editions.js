@@ -40,7 +40,7 @@ const Editions = () => {
                         <p className=" mt-6 text-center text-gray-500 ">
                         El cambio del aprendizaje de <br/> manera presencial a la era digital <br/> ha generado y propiciado un grado <br/> de responsabilidad y compromiso<br/> de todos...
                     </p>
-                    <img className=" left-24  desktop:block laptop:block ml-72
+                    <img className=" left-24  ml-72
                     laptop:block laptop:w-1/4 laptop:mx-20 laptop:-my-60
                     desktop:block desktop:w-1/6 desktop:mx-72 desktop:-my-60
                     tablet:block tablet:w-1/4 tablet:mx-8 tablet:-my-60

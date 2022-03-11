@@ -9,7 +9,7 @@ const SocialCount = () => {
   }, []);
 
   const getLikes = async ()=> {
-    await axios.get('ruta') //jalas de una ruta el total de likes
+    await axios.get('http://localhost:8000/api/listlike') //jalas de una ruta el total de likes
     .then(res=> {
       setCounter(res.data); //
     })
@@ -22,10 +22,12 @@ const SocialCount = () => {
     const obj={
       count: 1
     };
-    await axios.post('ruta',obj )//guarda un like --insert
+    await axios.post('http://localhost:8000/api/like',obj )//guarda un like --insert
     .then(res =>{ //si se guarda en la base de datos retunr true
       if(res.data.count)
         setCounter(counter+1);
+        alert("Gracias por tu Like!!!");
+        getLikes();
     })
     .catch(error=>console.log(error));
   }
