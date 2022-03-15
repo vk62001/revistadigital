@@ -4,6 +4,7 @@ import logo from '../../assets/images/Revista.png';
 import NavBar from '../../components/Navbar';
 import axios from 'axios';
 import moment from 'moment';
+import Views from '../../components/Views';
 const Editions = () => {
 
     const [files, setFiles] = useState([]);
@@ -23,15 +24,18 @@ const Editions = () => {
     };
 
     const redirection = file =>{
-        const tempUrl = file.replace("/var/www/html/revista_digital_server/public/", "")
+        ///var/www/html/revista_digital_server/public/
+        //npm run buile
+        const tempUrl = file.replace("/home/santiago/Documentos/Proyecto/revista_digital_server/public/", "");
         const url =  `http://localhost:8000/${tempUrl}`;
         window.open(url);
     }
     const renderFiles = () => {
         return files.map(e=>{
             console.log(e, 'revistas');
-            const image = e.image_path.replace('/var/www/html/revista_digital_server/public/', '');
+            const image = e.image_path.replace('/home/santiago/Documentos/Proyecto/revista_digital_server/public/', '');
             return(
+                
                 <div key={e.id} className="mb-72 cursor-pointer" onClick={()=>redirection(e.file_path)}>
                     <p className="mb-1 mt-10 font-sans text-4x2 font-bold text-blue-600 text-center">{moment(e.created_ad).format('DD/MM/YYYY')}</p>
                     <p className=" font-sans mt-4 text-center text-gray-600 text-2xl ">{e.name}</p>
@@ -45,12 +49,16 @@ const Editions = () => {
                     desktop:block desktop:w-1/6 desktop:mx-72 desktop:-my-60
                     tablet:block tablet:w-1/4 tablet:mx-8 tablet:-my-60
                     phone:block phone:w-1/2 phone:mx-20 phone:my-4" src={`http://localhost:8000/${image}`} alt="logo"/>
+
+                
                </div>
+               
             )
         })
     }
 
     return (
+        
         <div   >
             <NavBar 
                 white={false}
@@ -58,6 +66,7 @@ const Editions = () => {
            <div className="container">
                 <h1 className="mb-1 font-sans text-3xl font-bold text-blue-900 text-center">Ediciones</h1>
                {renderFiles()}
+               <Views></Views>
            </div>
         </div>
     )
