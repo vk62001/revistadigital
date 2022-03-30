@@ -127,7 +127,12 @@ const Login = () => {
                 <h2 className="w-full text-xl text-center mb-2 -mt-5 text-blue-600 font-black">Iniciar Sesión</h2>
                 <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="text" name="email1" onChange={handleInputChange} placeholder="Correo Electronico"/>
                 <input className="w-full mt-5 p-2.5 border-none bg-gray-200 text-base outline-none" type="password" name="password1" onChange={e => handleInputChange(e)} placeholder="Contraseña"/>
-                
+                <p 
+                  className="mt-9  hover:text-blue-600 cursor-pointer
+                  transform transition-all hover:-translate-y-1 hover:scale-110duration-300"
+                  
+                  
+                >Tecnologico Comitancillo</p>
                 <button type="submit" onClick={e => signIn(e)} 
                   className={('bg-blue-600')+` w-full py-2.5 px-10 mt-5 border-none text-sm cursor-pointer text-white outline-none rounded
                   transform transition-all hover:-translate-y-1 hover:scale-110duration-300`}

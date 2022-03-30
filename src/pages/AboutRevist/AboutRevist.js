@@ -47,8 +47,8 @@ const About = () => {
 
              </p>
              </div>
-             <div className=" absolute left-0 top-0 mt-5 ml-6">
-           <img className="w-40 logocomi phone:hidden tablet:block laptop:block desktop:block" src={logo1} alt="logo" />
+             <div className=" absolute left-0 top-0 mt-9 ml-6 tablet:w-1/4">
+           <img className="w-28 logocomi phone:hidden tablet:block laptop:block desktop:block" src={logo1} alt="logo" />
            </div>
            <div className=" absolute top-0 right-0 mr-20 mt-14">
            <img className="w-40 logosep phone:hidden tablet:block laptop:block desktop:block" src={sep} alt="sep" />
